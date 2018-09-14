@@ -2,8 +2,22 @@
 
 
 /*------------ Global ---------- */
+html {
+    color: #fff;
+}
+
+a {
+    color: #a0a0a0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #fff
+}
+
 body {
     margin: 0;
+    background: #000;
 }
 
 /*------------ Navbar ---------- */
