@@ -1,9 +1,10 @@
 /*------------ Fonts ---------- */
-
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
 /*------------ Global ---------- */
 html {
     color: #fff;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
 a {
@@ -17,17 +18,40 @@ a:hover {
 
 body {
     margin: 0;
-    background: #dadada;
+    background: #0e0e0e;
 }
 
 
 /*------------ Header ---------- */
 .header {
-    background: #b13a35;
+    background: #b32828;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-top: 40px;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: center;
+    height: 42px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 17px;
+}
+
+.header > div {
+    width: 33%;
+}
+
+.social-media-items {
+    font-size: 18px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-menu-items a,
+.social-media-items i {
+    text-transform: uppercase;
+    padding: 0 10px;
 }
 
 .sections {
@@ -37,12 +61,13 @@ body {
 }
 
 .logo {
-    width: 20vw;
-    height: 6vh;
+    width: 14vw;
+    height: 7vh;
     background: url(./images/bismark-logo.png) no-repeat;
     background-size: contain;
     min-width: 260px;
     min-height: 56px;
+    background-position-x: center;
 }
 
 
@@ -59,8 +84,7 @@ body {
 .landing {
     background: url(./images/landing-bg.jpg) no-repeat;
     background-size: cover;
-    background-position-y: 3%;
-    height: 55vh;
+    height: 57vh;
 }
 
 

@@ -6,8 +6,18 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div className="header">
+    <div className="social-media">
+      <div className="social-media-items">
+        <i class="fab fa-soundcloud"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook-square"></i>
+        <i class="fab fa-youtube"></i>
+      </div>
+    </div>
+
     <div className="logo"></div>
-    <nav className="nav-bar">
+
+    <div className="nav-bar">
         <div className="nav-menu-items">
           <Link to="/home">Home</Link>
           <Link to="/photos">Photos</Link>
@@ -17,7 +27,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
           <Link to="/login">Login</Link>
           <Link to="/signup">Sign Up</Link>
         </div>
-    </nav>
+    </div>
   </div>
 )
 
