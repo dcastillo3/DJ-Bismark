@@ -20,7 +20,18 @@ body {
     background: #000;
 }
 
-/*------------ Navbar ---------- */
+
+/*------------ Header ---------- */
+.header {
+    position: absolute;
+}
+
+.sections {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
 .logo {
     width: 20vw;
     height: 6vh;
@@ -28,4 +39,18 @@ body {
     background-size: contain;
     min-width: 260px;
     min-height: 56px;
+}
+
+
+/*------------ Main ---------- */
+.main {
+    flex: auto;
+}
+
+
+/*------------ Landing ---------- */
+.landing {
+    background: url(./images/landing-bg.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
