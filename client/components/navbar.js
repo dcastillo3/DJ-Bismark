@@ -6,9 +6,9 @@ import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
   <div>
-    <h1>DJ Bismark</h1>
-    <nav>
-        <div>
+    <div className="logo"></div>
+    <nav className="nav-bar">
+        <div className="nav-menu-items">
           <Link to="/home">Home</Link>
           <Link to="/photos">Photos</Link>
           <Link to="/videos">Videos</Link>
@@ -18,7 +18,6 @@ const Navbar = ({handleClick, isLoggedIn}) => (
           <Link to="/signup">Sign Up</Link>
         </div>
     </nav>
-    <hr />
   </div>
 )
 

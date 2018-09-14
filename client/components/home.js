@@ -10,7 +10,7 @@ export const UserHome = props => {
 
   return (
     <div>
-      <h3>This is the Home Component</h3>
+      <h3>Home</h3>
     </div>
   )
 }

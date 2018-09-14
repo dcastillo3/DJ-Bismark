@@ -1,0 +1,17 @@
+/*------------ Fonts ---------- */
+
+
+/*------------ Global ---------- */
+body {
+    margin: 0;
+}
+
+/*------------ Navbar ---------- */
+.logo {
+    width: 20vw;
+    height: 6vh;
+    background: url(./images/bismark-logo.png) no-repeat;
+    background-size: contain;
+    min-width: 260px;
+    min-height: 56px;
+}
