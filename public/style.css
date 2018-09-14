@@ -7,23 +7,27 @@ html {
 }
 
 a {
-    color: #a0a0a0;
+    color: #fff;
     text-decoration: none;
 }
 
 a:hover {
-    color: #fff
+    color: #a0a0a0;
 }
 
 body {
     margin: 0;
-    background: #000;
+    background: #dadada;
 }
 
 
 /*------------ Header ---------- */
 .header {
-    position: absolute;
+    background: #b13a35;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
 }
 
 .sections {
@@ -45,6 +49,9 @@ body {
 /*------------ Main ---------- */
 .main {
     flex: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 
@@ -52,5 +59,14 @@ body {
 .landing {
     background: url(./images/landing-bg.jpg) no-repeat;
     background-size: cover;
-    height: 100vh;
+    background-position-y: 3%;
+    height: 55vh;
+}
+
+
+/*------------ Footer ---------- */
+.footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }

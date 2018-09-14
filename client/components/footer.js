@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import {logout} from '../store'
 
 const Navbar = ({handleClick, isLoggedIn}) => (
-  <div className="header">
+  <div className="footer">
     <div className="logo"></div>
     <nav className="nav-bar">
         <div className="nav-menu-items">
