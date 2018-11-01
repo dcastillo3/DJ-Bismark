@@ -1,13 +1,11 @@
 import React from 'react'
+import {Header, Main, Footer} from './components'
 
-import {Header, Footer} from './components'
-import Routes from './routes'
-
-const App = () => {
+const App = props => {
   return (
     <div className="sections">
       <Header />
-      <Routes />
+      <Main />
       <Footer />
     </div>
   )

@@ -4,7 +4,7 @@ import {connect} from 'react-redux'
 import {Link} from 'react-router-dom'
 import {logout} from '../store'
 
-const Navbar = ({handleClick, isLoggedIn}) => (
+const Footer = ({handleClick, isLoggedIn}) => (
   <div className="footer flex-row">
     <div className="logo"></div>
     <nav className="nav-bar">
@@ -38,12 +38,12 @@ const mapDispatch = dispatch => {
   }
 }
 
-export default connect(mapState, mapDispatch)(Navbar)
+export default connect(mapState, mapDispatch)(Footer)
 
 /**
  * PROP TYPES
  */
-Navbar.propTypes = {
+Footer.propTypes = {
   handleClick: PropTypes.func.isRequired,
   isLoggedIn: PropTypes.bool.isRequired
 }
