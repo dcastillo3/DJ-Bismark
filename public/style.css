@@ -24,7 +24,7 @@ body {
 
 /*------------ Header ---------- */
 .header {
-    background: #b32828;
+    background: #ad090b9e;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -35,7 +35,6 @@ body {
     position: absolute;
     left: 0px;
     right: 0px;
-    top: 17px;
 }
 
 .header > div {
