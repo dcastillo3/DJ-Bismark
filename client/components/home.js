@@ -10,7 +10,7 @@ export const UserHome = props => {
 
   return (
     <div className="landing">
-      
+
     </div>
   )
 }

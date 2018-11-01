@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {withRouter, Route, Switch} from 'react-router-dom'
 import PropTypes from 'prop-types'
-import {Login, Signup, UserHome, Home, Photos, Videos, Bio, Store} from './components'
+import {Login, Signup, Home, Photos, Videos, Bio, Store} from './components'
 import {me} from './store'
 
 /**
@@ -17,24 +17,26 @@ class Routes extends Component {
     const {isLoggedIn} = this.props
 
     return (
-      <Switch>
-        {/* Routes placed here are available to all visitors */}
-        <Route path="/home" component={Home} />
-        <Route path="/photos" component={Photos} />
-        <Route path="/videos" component={Videos} />
-        <Route path="/bio" component={Bio} />
-        <Route path="/store" component={Store} />
-        <Route path="/signup" component={Signup} />
-        <Route path="/login" component={Login} />
-        {isLoggedIn && (
-          <Switch>
-            {/* Routes placed here are only available after logging in */}
-            {/* <Route path="/home" component={UserHome} /> */}
-          </Switch>
-        )}
-        {/* Displays our Login component as a fallback */}
-        <Route component={Home} />
-      </Switch>
+      <div className="main">
+        <Switch>
+          {/* Routes placed here are available to all visitors */}
+          <Route path="/home" component={Home} />
+          <Route path="/photos" component={Photos} />
+          <Route path="/videos" component={Videos} />
+          <Route path="/bio" component={Bio} />
+          <Route path="/store" component={Store} />
+          <Route path="/signup" component={Signup} />
+          <Route path="/login" component={Login} />
+          {isLoggedIn && (
+            <Switch>
+              {/* Routes placed here are only available after logging in */}
+              {/* <Route path="/home" component={UserHome} /> */}
+            </Switch>
+          )}
+          {/* Displays our Login component as a fallback */}
+          <Route component={Home} />
+        </Switch>
+      </div>
     )
   }
 }
