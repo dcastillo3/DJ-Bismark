@@ -1,11 +1,18 @@
-/*------------ Fonts ---------- */
+/* #region --------- Fonts --------- */
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
 
-/*------------ Global ---------- */
-html {
-    color: #fff;
+
+/* #endregion ------ Fonts --------- */
+
+
+/* #region --------- Global --------- */
+body {
+    color: #000;
+    background: #0e0e0e;
+    margin: 0;
     font-family: 'Barlow Condensed', sans-serif;
 }
+
 
 a {
     color: #fff;
@@ -16,39 +23,39 @@ a:hover {
     color: #a0a0a0;
 }
 
-body {
-    margin: 0;
-    background: #0e0e0e;
+.text-center {
+    text-align: center;
 }
 
+.element-center {
+    margin: 0 auto;
+}
 
-/*------------ Header ---------- */
-.header {
-    background: #ad090b9e;
+.narrow-content {
+    max-width: 700px;
+}
+
+.flex-row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 20px;
     justify-content: center;
-    height: 42px;
-    position: absolute;
-    left: 0px;
-    right: 0px;
 }
 
-.header > div {
-    width: 33%;
-}
-
-.social-media-items {
-    font-size: 18px;
+.flex-column {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 
-.nav-menu-items a,
-.social-media-items i {
+.flex-full-grid > * {
+    flex: 1;
+}
+
+.menu-items > * {
     text-transform: uppercase;
     padding: 0 10px;
 }
@@ -57,6 +64,105 @@ body {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+
+/* #endregion ------ Global --------- */
+
+
+/* #region ------ Spacing --------- */
+.mini-padding {
+    padding: 5px 0;
+}
+
+.small-padding {
+    padding: 10px;
+}
+
+.medium-padding {
+    padding: 30px 40px;
+}
+
+.large-padding {
+    padding: 60px 40px;
+}
+
+.mini-margin {
+    margin: 5px 0;
+}
+
+.small-margin {
+    margin: 10px 0;
+}
+
+.medium-margin {
+    margin: 30px 0;
+}
+
+.large-margin {
+    margin: 60px 0;
+}
+
+
+/* #endregion ------ Spacing --------- */
+
+
+/* #region --------- Titles --------- */
+.title {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.subtitle {
+    font-size: 16px;
+}
+
+.article-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* #endregion ------ Titles --------- */
+
+
+/* #region --------- Palettes --------- */
+.palette-one {
+    background-color: #631b26;
+    color: #f7f7f7;
+}
+
+.palette-one-transparent {
+    background-color: #ad090b9e;
+    color: #fff;
+}
+
+.palette-two {
+    background-color: #221f2d;
+    color: white;
+}
+
+.palette-three {
+    background-color: #674d65;
+    color: white;
+}
+
+
+/* #endregion ------ Palettes --------- */
+
+
+/* #region --------- Header --------- */
+.navbar {
+    margin-top: 20px;
+    height: 42px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+}
+
+.social-media {
+    font-size: 18px;
+    justify-content: flex-end;
 }
 
 .logo {
@@ -70,16 +176,14 @@ body {
 }
 
 
-/*------------ Main ---------- */
+/* #endregion --------- Header --------- */
+
+
+/* #region --------- Main --------- */
 .main {
     flex: auto;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
 }
 
-
-/*------------ Landing ---------- */
 .landing {
     background: url(./images/landing-bg.jpg) no-repeat;
     background-size: cover;
@@ -87,9 +191,12 @@ body {
 }
 
 
-/*------------ Footer ---------- */
+/* #endregion --------- Main --------- */
+
+
+/* #region --------- Footer --------- */
 .footer {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
 }
+
+
+/* #endregion --------- Footer --------- */
