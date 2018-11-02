@@ -206,11 +206,11 @@ a:hover {
 }
 
 .landing-video-layer-border {
-    background: #000;
-    height: 28vh;
-    width: 30vw;
+    background: #1657862e;
+    height: 33vh;
+    width: 34vw;
     align-self: flex-end;
-    margin: 60px;
+    margin: 4vw 4vw 2vw;
 }
 
 
