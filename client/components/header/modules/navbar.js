@@ -1,31 +1,46 @@
-import React from 'react';
+import React, {Component} from 'react'
 import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
-import {Link} from 'react-router-dom';
 import {logout} from '../../../store';
+import { smoothScroll } from '../../../utilities/utilities';
 
-const Navbar = ({handleClick, isLoggedIn}) => (
-  <div className="navbar flex-row palette-one-transparent flex-full-grid">
-    <div className="social-media menu-items flex-row">
-      <i class="fab fa-soundcloud"></i>
-      <i class="fab fa-instagram"></i>
-      <i class="fab fa-facebook-square"></i>
-      <i class="fab fa-youtube"></i>
-    </div>
+class Navbar extends Component { 
+  constructor(props) {
+    super(props);
+  }
+  
+  onSectionClick() {
+    // TESTING SMOOTH SCROLL
+    smoothScroll(document.body, 0, 1250);
+  }
 
-    <div className="logo"></div>
+  render() {
+    const { handleClick, isLoggedIn } = this.props;
 
-    <div className="nav-links menu-items">
-      <Link to="/home">Home</Link>
-      <Link to="/photos">Photos</Link>
-      <Link to="/videos">Videos</Link>
-      <Link to="/bio">Bio</Link>
-      <Link to="/store">Store</Link>
-      <Link to="/login">Login</Link>
-      <Link to="/signup">Sign Up</Link>
-    </div>
-  </div>
-)
+    return (
+      <div className="navbar flex-row flex-center palette-one-transparent flex-full-grid">
+        <div className="social-media menu-items flex-row flex-center">
+          <i class="fab fa-soundcloud"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-facebook-square"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+
+        <div className="logo"></div>
+
+        <div className="nav-links menu-items">
+          <a onClick={(event) => this.onSectionClick(event)}>Home</a>
+          <a onClick={(event) => this.onSectionClick(event)}>Photos</a>
+          <a onClick={(event) => this.onSectionClick(event)}>Videos</a>
+          <a onClick={(event) => this.onSectionClick(event)}>Bio</a>
+          <a onClick={(event) => this.onSectionClick(event)}>Store</a>
+          {/* <Link to="/login">Login</Link>
+          <Link to="/signup">Sign Up</Link> */}
+        </div>
+      </div>
+    )
+  }
+}
 
 /**
  * CONTAINER
