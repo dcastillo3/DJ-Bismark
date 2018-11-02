@@ -9,10 +9,10 @@ class Navbar extends Component {
     super(props);
   }
   
-  onSectionClick() {
-    // TESTING SMOOTH SCROLL
-    smoothScroll(document.body, 0, 1250);
-  }
+  // onSectionClick() {
+  //   // TESTING SMOOTH SCROLL
+  //   smoothScroll(document.body, 0, 1250);
+  // }
 
   render() {
     const { handleClick, isLoggedIn } = this.props;

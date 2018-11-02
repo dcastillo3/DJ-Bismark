@@ -222,17 +222,3 @@ a:hover {
 
 
 /* #endregion --------- Footer --------- */
-
-
-
-
-/* TEMPORARY TESTING SECTION SCROLL */
-.main > div {
-    min-height: 500px;
-    background-color: #fff;
-}
-
-.navbar {
-    position: fixed;
-    z-index: 99;
-}
