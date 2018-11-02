@@ -137,8 +137,8 @@ a:hover {
 
 /* #region --------- Palettes --------- */
 .palette-one {
-    background-color: #631b26;
-    color: #f7f7f7;
+    background-color: rgb(171, 71, 71);
+    color: rgb(247, 247, 247);
 }
 
 .palette-one-transparent {
@@ -147,13 +147,27 @@ a:hover {
 }
 
 .palette-two {
-    background-color: #061927;
-    color: #fff;
+    background-color: rgb(22, 23, 27);
+    color: rgb(255, 255, 255);
 }
 
 .palette-two-transparent {
     background-color: #1657862e;
     color: #fff;
+}
+
+.palette-three {
+    background-color: rgb(234, 234, 234);
+    color: rgb(45, 45, 45);
+}
+
+.palette-three-transparent {
+    background-color: rgba(234, 234, 234, 0.6);
+    color: rgb(45, 45, 45);
+}
+
+.bottom-blue {
+    border-bottom: 4px solid rgb(72, 155, 199);
 }
 
 /* #endregion ------ Palettes --------- */
@@ -203,7 +217,7 @@ a:hover {
 }
 
 .landing-bismark-layer {
-    background: url(./images/landing-bismark-layer.png) no-repeat;
+    background: url(./images/landing-bismark-layer2.png) no-repeat;
     background-size: cover;
 }
 
