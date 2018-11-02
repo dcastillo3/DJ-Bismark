@@ -18,10 +18,16 @@ export const Landing = props => {
       <Slide direction="left" timeout={1000} in={true} style={{transitionDelay: 1500}}>
       <div className="landing-video-layer overlay-element flex-column flex-center">
         <div className="landing-video-layer-border">
-          <video width="570" height="320" controls>
-            <source src="videos/DJ-Bismark-Promo-WIP.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <iframe 
+            src="https://drive.google.com/file/d/1sPl7fjCbKqBLuKdZZNoKE35qxzDTbk6w/preview" 
+            frameborder="0" 
+            width="570" 
+            height="320" 
+            allowfullscreen="true" 
+            mozallowfullscreen="true" 
+            webkitallowfullscreen="true" 
+            title="Video player">
+          </iframe>
         </div>
       </div>
       </Slide> 
