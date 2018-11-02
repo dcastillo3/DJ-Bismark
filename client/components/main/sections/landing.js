@@ -17,7 +17,12 @@ export const Landing = props => {
       </Fade>
       <Slide direction="left" timeout={1000} in={true} style={{transitionDelay: 1500}}>
       <div className="landing-video-layer overlay-element flex-column flex-center">
-        <div className="landing-video-layer-border"></div>
+        <div className="landing-video-layer-border">
+          <video width="570" height="320" controls>
+            <source src="videos/DJ-Bismark-Promo-WIP.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
       </Slide> 
     </div>
