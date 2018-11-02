@@ -32,6 +32,7 @@ class Navbar extends Component {
 
           <div className="nav-links menu-items">
             <a onClick={(event) => this.onSectionClick(event)}>Home</a>
+            <a onClick={(event) => this.onSectionClick(event)}>Music</a>
             <a onClick={(event) => this.onSectionClick(event)}>Photos</a>
             <a onClick={(event) => this.onSectionClick(event)}>Videos</a>
             <a onClick={(event) => this.onSectionClick(event)}>Bio</a>
