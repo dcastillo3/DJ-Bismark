@@ -18,6 +18,7 @@ body {
 a {
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
 
 a:hover {
@@ -146,15 +147,14 @@ a:hover {
 }
 
 .palette-two {
-    background-color: #221f2d;
-    color: white;
+    background-color: #061927;
+    color: #fff;
 }
 
-.palette-three {
-    background-color: #674d65;
-    color: white;
+.palette-two-transparent {
+    background-color: #1657862e;
+    color: #fff;
 }
-
 
 /* #endregion ------ Palettes --------- */
 
@@ -193,20 +193,21 @@ a:hover {
     flex: auto;
 }
 
+.landing {
+    height: 61vh;
+}
+
 .landing-bg-layer {
     background: url(./images/landing-bg-layer.jpg) no-repeat;
     background-size: cover;
-    height: 57vh;
 }
 
 .landing-bismark-layer {
     background: url(./images/landing-bismark-layer.png) no-repeat;
     background-size: cover;
-    height: 57vh;
 }
 
 .landing-video-layer-border {
-    background: #1657862e;
     align-self: flex-end;
     margin: 4vw 4vw 2vw;
     padding: 20px;

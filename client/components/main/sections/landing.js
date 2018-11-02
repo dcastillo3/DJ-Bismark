@@ -11,13 +11,13 @@ export const Landing = props => {
 
   return (
     <div className="landing overlay-parent">
-      <div className="landing-bg-layer"></div>
+      <div className="landing-bg-layer overlay-element"></div>
       <Fade timeout={3000} in={true}>
         <div className="landing-bismark-layer overlay-element"></div>
       </Fade>
-      <Slide direction="left" timeout={1000} in={true} style={{transitionDelay: 1500}}>
+      <Slide direction="left" timeout={1000} in={true} style={{transitionDelay: 1000}}>
       <div className="landing-video-layer overlay-element flex-column flex-center">
-        <div className="landing-video-layer-border">
+        <div className="landing-video-layer-border palette-two-transparent">
           <iframe 
             src="https://drive.google.com/file/d/1sPl7fjCbKqBLuKdZZNoKE35qxzDTbk6w/preview" 
             frameborder="0" 
