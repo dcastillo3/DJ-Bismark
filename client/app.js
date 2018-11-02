@@ -3,7 +3,7 @@ import {Header, Main, Footer} from './components'
 
 const App = props => {
   return (
-    <div className="sections">
+    <div className="sections flex-column">
       <Header />
       <Main />
       <Footer />

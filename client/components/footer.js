@@ -5,7 +5,7 @@ import {Link} from 'react-router-dom'
 import {logout} from '../store'
 
 const Footer = ({handleClick, isLoggedIn}) => (
-  <div className="footer flex-row">
+  <div className="footer flex-row flex-center">
     <div className="logo"></div>
     <nav className="nav-bar">
         <div className="nav-menu-items">

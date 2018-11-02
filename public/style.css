@@ -1,5 +1,6 @@
 /* #region --------- Fonts --------- */
 @import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
 
 
 /* #endregion ------ Fonts --------- */
@@ -39,14 +40,15 @@ a:hover {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
 }
 
 .flex-column {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+.flex-center {
     align-items: center;
     justify-content: center;
 }
@@ -60,10 +62,16 @@ a:hover {
     padding: 0 10px;
 }
 
-.sections {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+.overlay-parent {
+    position: relative;
+}
+
+.overlay-element {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 
@@ -158,6 +166,7 @@ a:hover {
     position: absolute;
     left: 0px;
     right: 0px;
+    z-index: 10;
 }
 
 .social-media {
@@ -184,10 +193,23 @@ a:hover {
     flex: auto;
 }
 
-.landing {
-    background: url(./images/landing-bg.jpg) no-repeat;
+.landing-bg-layer {
+    background: url(./images/landing-bg-layer.jpg) no-repeat;
     background-size: cover;
     height: 57vh;
+}
+
+.landing-bismark-layer {
+    background: url(./images/landing-bismark-layer.png) no-repeat;
+    background-size: cover;
+    height: 57vh;
+}
+
+.landing-video-layer-border {
+    background: #1657862e;
+    align-self: flex-end;
+    margin: 4vw 4vw 2vw;
+    padding: 20px;
 }
 
 
