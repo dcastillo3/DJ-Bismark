@@ -10,7 +10,6 @@ class Main extends Component {
         <Photos />
         <Videos />
         <Bio />
-        <Store />
         <Venues />
       </div>
     )

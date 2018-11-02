@@ -204,7 +204,7 @@ a:hover {
 /* #endregion --------- Header --------- */
 
 
-/* #region --------- Main --------- */
+/* #region --------- Landing --------- */
 .main {
     flex: auto;
 }
@@ -230,7 +230,84 @@ a:hover {
 }
 
 
-/* #endregion --------- Main --------- */
+/* #endregion --------- Landing --------- */
+
+
+/* #region --------- Venues --------- */
+.venue-items > div {
+    flex: 1 0 20%;
+    height: 100px;
+    width: 200px;
+}
+
+.venue-item-moschino {
+    background: url(./images/venues/moschino.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.venue-item-pianos {
+    background: url(./images/venues/pianos.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.venue-item-lately {
+    background: url(./images/venues/lately.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.venue-item-handy {
+    background: url(./images/venues/handy.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.venue-item-slate {
+    background: url(./images/venues/slate.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.venue-item-space {
+    background: url(./images/venues/space.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.venue-item-playstation {
+    background: url(./images/venues/playstation.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.venue-item-webster {
+    background: url(./images/venues/webster.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.venue-item-studio-151 {
+    background: url(./images/venues/studio-151.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.venue-item-thai-rock {
+    background: url(./images/venues/thai-rock.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.venue-item-esquina {
+    background: url(./images/venues/esquina.png) no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+
+/* #endregion --------- Venues --------- */
 
 
 /* #region --------- Footer --------- */

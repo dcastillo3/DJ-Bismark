@@ -35,7 +35,7 @@ class Navbar extends Component {
             <a onClick={(event) => this.onSectionClick(event)}>Photos</a>
             <a onClick={(event) => this.onSectionClick(event)}>Videos</a>
             <a onClick={(event) => this.onSectionClick(event)}>Bio</a>
-            <a onClick={(event) => this.onSectionClick(event)}>Store</a>
+            <a onClick={(event) => this.onSectionClick(event)}>Venues</a>
             {/* <Link to="/login">Login</Link>
             <Link to="/signup">Sign Up</Link> */}
           </div>
