@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Landing, Photos, Videos, Bio, Store} from './sections';
+import {Landing, Photos, Videos, Bio, Store, Venues} from './sections';
 
 class Main extends Component {
 
@@ -11,6 +11,7 @@ class Main extends Component {
         <Videos />
         <Bio />
         <Store />
+        <Venues />
       </div>
     )
   }
