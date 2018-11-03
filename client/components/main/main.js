@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import {Landing, Music, Photos, Videos, Bio, Store, Venues} from './sections';
+import ContactForm from '../contact-form';
 
 class Main extends Component {
 
@@ -12,6 +13,7 @@ class Main extends Component {
         <Videos />
         <Bio />
         <Venues />
+        <ContactForm />
       </div>
     )
   }
