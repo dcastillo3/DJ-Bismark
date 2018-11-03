@@ -21,8 +21,8 @@ export const Landing = props => {
           <iframe 
             src="https://drive.google.com/file/d/1sPl7fjCbKqBLuKdZZNoKE35qxzDTbk6w/preview" 
             frameborder="0" 
-            width="570" 
-            height="320" 
+            width="425" 
+            height="240" 
             allowfullscreen="true" 
             mozallowfullscreen="true" 
             webkitallowfullscreen="true" 
