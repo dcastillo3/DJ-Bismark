@@ -3,7 +3,8 @@ import React from 'react'
 export const ContactForm = props => {
 
   return (
-    <div className="contact-form-container narrow-content palette-three flex-row flex-center large-padding">
+    <div className="contact-form-container flex-column flex-center palette-three">
+        <form className="flex-row flex-center large-padding narrow-content">
           <div className="form-group flex-column">
             <label>First</label>
             <input />
@@ -48,7 +49,8 @@ export const ContactForm = props => {
             <label>Comments</label>
             <textarea />
           </div>
-        </div>
+        </form>
+    </div>
   )
 }
 

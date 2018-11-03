@@ -29,8 +29,7 @@ a:hover {
 .form-group {
     justify-content: center;
     align-items: flex-start;
-    padding: 0px 60px;
-    flex: 0 calc(50% - 120px);
+    flex: 0 50%;
 }
 
 input {
