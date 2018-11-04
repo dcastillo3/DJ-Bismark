@@ -265,6 +265,20 @@ label {
 /* #endregion --------- Landing --------- */
 
 
+/* #region --------- Music --------- */
+.music-content {
+    width: 100%;
+}
+
+.music-container {
+    width: 100%;
+    padding: 20px;
+}
+
+
+/* #endregion --------- Music --------- */
+
+
 /* #region --------- Venues --------- */
 .venue-items > div {
     flex: 1 0 20%;
