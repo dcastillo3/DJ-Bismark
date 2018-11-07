@@ -22,10 +22,10 @@ class Navbar extends Component {
       <Slide direction="down" timeout={1000} in={true} style={{transitionDelay: 1000}}>
         <div className="navbar flex-row flex-center palette-one-transparent flex-full-grid">
           <div className="social-media menu-items flex-row flex-center">
-            <a href="https://soundcloud.com/bismarkbeats" target="_blank" class="fab fa-soundcloud"></a>
-            <a href="https://www.instagram.com/bismarkbeats" target="_blank" class="fab fa-instagram"></a>
-            <a href="https://www.facebook.com/hyonam.heller" target="_blank" class="fab fa-facebook-square"></a>
-            <a href="https://www.youtube.com/watch?v=xZ9cgUGmzfY" target="_blank" class="fab fa-youtube"></a>
+            <a href="https://soundcloud.com/bismarkbeats" target="_blank" className="fab fa-soundcloud"></a>
+            <a href="https://www.instagram.com/bismarkbeats" target="_blank" className="fab fa-instagram"></a>
+            <a href="https://www.facebook.com/hyonam.heller" target="_blank" className="fab fa-facebook-square"></a>
+            <a href="https://www.youtube.com/watch?v=xZ9cgUGmzfY" target="_blank" className="fab fa-youtube"></a>
           </div>
 
           <div className="logo"></div>
