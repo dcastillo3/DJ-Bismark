@@ -1,5 +1,5 @@
-import React from 'react'
-import {Header, Main, Footer} from './components'
+import React from 'react';
+import {Header, Main, Footer} from './components';
 
 const App = props => {
   return (
