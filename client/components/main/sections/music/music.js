@@ -33,8 +33,8 @@ export class Music extends Component {
     const { currentMix } = this.state;
 
     return (
-      <div className="music flex-column flex-center palette-three">
-        <div className="music-content overlay-parent large-padding">
+      <div className="music flex-column flex-center palette-three large-padding">
+        <div className="music-content overlay-parent large-margin">
           <MusicPlayer
             mix={currentMix}
           />
@@ -50,7 +50,7 @@ export class Music extends Component {
                       <div mix={mix.url} onClick={(event) => this.handleMix(event)} className="music-mix-track-click overlay-element"></div>
                       
                       <div className="music-mix-track-container flex-row mini-margin">
-                        <i class="music-mix-track-play far fa-play-circle"></i>
+                        <i className="music-mix-track-play far fa-play-circle"></i>
                         <div className="music-mix-track-number small-padding">{i}</div>
                         <div className="music-mix-track-name small-padding">{mix.name}</div>
                       </div>

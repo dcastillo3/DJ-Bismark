@@ -272,8 +272,8 @@ label {
     max-width: 1000px;
 }
 
-.music-mix-tracks {
-
+.music-mixes-container {
+    justify-content: flex-end;
 }
 
 .music-mix-track-container {
