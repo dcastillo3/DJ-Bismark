@@ -3,7 +3,7 @@ import React from 'react'
 export const Bio = props => {
 
   return (
-    <div className="bio flex-column flex-center palette-four">
+    <div id="bio" className="bio flex-column flex-center palette-four">
       <div className="bio-content narrow-content large-padding">
         <div className="bio-title title small-margin">About Bismark</div>
         <div className="bio-description">

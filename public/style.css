@@ -258,7 +258,7 @@ label {
 .landing-video-layer-border {
     align-self: flex-end;
     margin: 4vw 4vw 0;
-    padding: 20px;
+    padding: 14px;
 }
 
 
@@ -266,13 +266,57 @@ label {
 
 
 /* #region --------- Music --------- */
-.music-content {
-    width: 100%;
+.music {
+    background: url(images/music-laptop-layer.png) no-repeat;
+    background-size: contain;
+    background-position: right;
 }
 
-.music-container {
+.music-content {
     width: 100%;
+    max-width: 1150px;
+}
+
+.music-content-row {
+    flex: 33.33%;
+}
+
+.track-container-row-1 {
+    flex: 25%;
+}
+
+.track-container-row-2 {
+    flex: 75%;
+}
+
+.music-content-row-border {
+    padding: 14px;
+}
+
+.music-mixes-container {
+    justify-content: flex-end;
+}
+
+.music-mix-track-container {
+    align-items: center;
+    z-index: 10;
+}
+
+.music-player {
+    padding: 14px;
+    position: absolute;
+    bottom: calc(12.5% - 28px);
+    left: 0;
+    width: calc(75% - 28px);
+    height: calc(66.67% - 28px);
+}
+
+.music-mixes {
     padding: 20px;
+    position: relative;
+    left: 89%;
+    bottom: 35%;
+    display: inline-block;
 }
 
 
