@@ -275,6 +275,8 @@ label {
 .music-content {
     width: 100%;
     max-width: 1150px;
+    background: black;
+    padding: 20px;
 }
 
 .music-content-row {
@@ -283,10 +285,17 @@ label {
 
 .track-container-row-1 {
     flex: 25%;
+    position: relative;
+    top: 17px;
+    text-transform: uppercase;
+    font-size: 20px;
 }
 
 .track-container-row-2 {
-    flex: 75%;
+    flex: calc(75% - 60px);
+    margin-left: 60px;
+    font-size: 14px;
+    letter-spacing: 1px;
 }
 
 .music-content-row-border {
@@ -306,7 +315,7 @@ label {
     padding: 14px;
     position: absolute;
     bottom: calc(12.5% - 28px);
-    left: 0;
+    left: 20px;
     width: calc(75% - 28px);
     height: calc(66.67% - 28px);
 }
