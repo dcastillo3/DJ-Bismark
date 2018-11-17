@@ -34,12 +34,12 @@ export class Music extends Component {
 
     return (
       <div className="music flex-column flex-center palette-three large-padding">
-        <div className="music-content overlay-parent large-margin">
+        {/* <div className="music-content overlay-parent large-margin">
           <MusicPlayer
             mix={currentMix}
           />
 
-          <div className="music-mixes-container overlay-element flex-row">
+          <div className="music-mixes-container overlay-element">
             <div className="music-mixes flex-column large-padding palette-one-transparent">
               <div className="music-mixes-title medium-margin subtitle">Tracklist</div>
 
@@ -57,6 +57,43 @@ export class Music extends Component {
                     </div>
                   )
                 })}
+              </div>
+            </div>
+          </div>
+
+        </div> */}
+
+        <div className="music-content overlay-parent flex-row">
+          <MusicPlayer
+              mix={currentMix}
+            />
+
+          <div className="music-content-row empty">
+          </div>
+
+          <div className="music-content-row empty">
+          </div>
+
+          <div className="music-content-row">
+            <div className="music-content-row-border palette-one-transparent">
+              <div className="track-container flex-row">
+                <div className="track-container-row-1 track-title-row">Tracklist</div>
+
+                <div className="track-container-row-2 flex-column mini-margin">
+                  {this.state.mixes.map((mix, i) => {
+                    return (
+                      <div key={mix.url} className="music-mix-track overlay-parent">
+                        <div mix={mix.url} onClick={(event) => this.handleMix(event)} className="music-mix-track-click overlay-element"></div>
+                        
+                        <div className="music-mix-track-container flex-row mini-margin">
+                          <i className="music-mix-track-play far fa-play-circle"></i>
+                          <div className="music-mix-track-name small-padding">{mix.name}</div>
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+
               </div>
             </div>
           </div>

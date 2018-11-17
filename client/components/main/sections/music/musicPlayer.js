@@ -7,7 +7,7 @@ export const MusicPlayer = props => {
     <div className="music-player large-padding palette-one-transparent">
       <iframe 
         width="100%" 
-        height="300" 
+        height="100%" 
         scrolling="no" 
         frameborder="no" 
         allow="autoplay" 
