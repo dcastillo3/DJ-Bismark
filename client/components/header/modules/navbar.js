@@ -3,17 +3,12 @@ import PropTypes from 'prop-types';
 import {connect} from 'react-redux';
 import {logout} from '../../../store';
 import { Slide } from '@material-ui/core';
-import { smoothScroll } from '../../../utilities/utilities';
+import { Link as ScrollLink } from 'react-scroll';
 
 class Navbar extends Component { 
   constructor(props) {
     super(props);
   }
-  
-  // onSectionClick() {
-  //   // TESTING SMOOTH SCROLL
-  //   smoothScroll(document.body, 0, 1250);
-  // }
 
   render() {
     const { handleClick, isLoggedIn } = this.props;
@@ -31,12 +26,13 @@ class Navbar extends Component {
           <div className="logo"></div>
 
           <div className="nav-links menu-items">
-            <a onClick={(event) => this.onSectionClick(event)}>Home</a>
-            <a onClick={(event) => this.onSectionClick(event)}>Music</a>
-            <a onClick={(event) => this.onSectionClick(event)}>Photos</a>
-            <a onClick={(event) => this.onSectionClick(event)}>Videos</a>
-            <a onClick={(event) => this.onSectionClick(event)}>Bio</a>
-            <a onClick={(event) => this.onSectionClick(event)}>Venues</a>
+            <ScrollLink activeClass="active" to="home" spy={true} smooth={true} duration={500} >Home</ScrollLink>
+            <ScrollLink activeClass="active" to="music" spy={true} smooth={true} duration={500} >Music</ScrollLink>
+            <ScrollLink activeClass="active" to="photos" spy={true} smooth={true} duration={500} >Photos</ScrollLink>
+            <ScrollLink activeClass="active" to="videos" spy={true} smooth={true} duration={500} >Videos</ScrollLink>
+            <ScrollLink activeClass="active" to="bio" spy={true} smooth={true} duration={500} >Bio</ScrollLink>
+            <ScrollLink activeClass="active" to="venues" spy={true} smooth={true} duration={500} >Venues</ScrollLink>
+            <ScrollLink activeClass="active" to="contact" spy={true} smooth={true} duration={500} >Contact</ScrollLink>
             {/* <Link to="/login">Login</Link>
             <Link to="/signup">Sign Up</Link> */}
           </div>

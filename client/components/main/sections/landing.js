@@ -10,7 +10,7 @@ export const Landing = props => {
   const {email} = props
 
   return (
-    <div className="landing overlay-parent palette-three bottom-blue">
+    <div id="home" className="landing overlay-parent palette-three bottom-blue">
       <div className="landing-bg-layer overlay-element"></div>
       <Fade timeout={3000} in={true}>
         <div className="landing-bismark-layer overlay-element"></div>

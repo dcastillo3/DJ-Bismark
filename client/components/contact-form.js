@@ -3,7 +3,7 @@ import React from 'react'
 export const ContactForm = props => {
 
   return (
-    <div className="contact-form-container flex-column flex-center palette-three">
+    <div id="contact" className="contact-form-container flex-column flex-center palette-three">
         <form className="flex-row flex-center large-padding narrow-content">
           <div className="form-group flex-column">
             <label>First</label>

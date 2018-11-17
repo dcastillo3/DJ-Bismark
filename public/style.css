@@ -266,9 +266,14 @@ label {
 
 
 /* #region --------- Music --------- */
+.music {
+    background: url(images/music-laptop-layer.png) no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
 .music-content {
     width: 100%;
-    justify-content: center;
     max-width: 1150px;
 }
 

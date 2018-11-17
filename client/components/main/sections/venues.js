@@ -3,7 +3,7 @@ import React from 'react'
 export const Venues = props => {
 
   return (
-    <div className="venues flex-column flex-center palette-three bottom-blue">
+    <div id="venues" className="venues flex-column flex-center palette-three bottom-blue">
       <div className="venue-content flex-column flex-center narrow-content large-padding">
         <div className="venue-items flex-row flex-center">
             <div className="venue-item-moschino"></div>
