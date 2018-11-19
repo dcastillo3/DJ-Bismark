@@ -42,10 +42,11 @@ export class Venues extends Component {
           <div className="venue-items flex-row flex-center">
             {venues.length && venues.map(venue => {
               const { image } = venue;
-
-              const splitPath = image.split('.').reverse();
-              const imageExtension = splitPath[0];
-              const imageName = splitPath[1].split('/').reverse()[0];
+              
+              //Write optimal algorithm to find filename without extension
+              const lastDot = image.lastIndexOf('.') > -1 ? image.lastIndexOf('.') : image.length - 1;
+              const lastSlash = image.lastIndexOf('/') > -1 ? image.lastIndexOf('/') : 0;
+              const imageName = image.slice(lastSlash + 1, lastDot);
 
               const venueImage = {
                 backgroundImage: `url(${image})`
