@@ -33,7 +33,10 @@ export class Music extends Component {
     const { currentMix } = this.state;
 
     return (
-      <div id="music" className="music flex-column flex-center palette-three large-padding">
+      <div id="music" className="music overlay-parent flex-column flex-center palette-three large-padding">
+        <div className="music-bg-layer overlay-element"></div>
+        <div className="music-laptop-layer overlay-element"></div>
+
         <div className="music-content overlay-parent flex-row">
           <MusicPlayer
               mix={currentMix}

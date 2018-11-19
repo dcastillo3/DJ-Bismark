@@ -267,7 +267,16 @@ label {
 
 /* #region --------- Music --------- */
 .music {
-    background: url(images/music-laptop-layer.png) no-repeat;
+    
+}
+
+.music-bg-layer {
+    background: url(./images/landing-bg-layer.jpg) no-repeat;
+    background-size: cover;
+}
+
+.music-laptop-layer {
+    background: url(./images/music-laptop-layer.png) no-repeat;
     background-size: contain;
     background-position: right;
 }
@@ -275,7 +284,6 @@ label {
 .music-content {
     width: 100%;
     max-width: 1150px;
-    background: black;
     padding: 20px;
 }
 
@@ -300,6 +308,7 @@ label {
 
 .music-content-row-border {
     padding: 14px;
+    background: linear-gradient(0.25turn, #0e0e0e, #272727);
 }
 
 .music-mixes-container {
@@ -334,74 +343,74 @@ label {
 
 /* #region --------- Venues --------- */
 .venue-items > div {
-    flex: 1 0 20%;
-    height: 100px;
+    flex: 1 0 25%;
+    height: 82px;
     width: 200px;
 }
 
 .venue-item-moschino {
-    background: url(./images/venues/moschino.png) no-repeat;
-    background-size: contain;
+    background-size: 54%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .venue-item-pianos {
-    background: url(./images/venues/pianos.png) no-repeat;
-    background-size: contain;
+    background-size: 31%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .venue-item-lately {
-    background: url(./images/venues/lately.png) no-repeat;
-    background-size: contain;
+    background-size: 55%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .venue-item-handy {
-    background: url(./images/venues/handy.png) no-repeat;
-    background-size: contain;
+    background-size: 32%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .venue-item-slate {
-    background: url(./images/venues/slate.png) no-repeat;
-    background-size: contain;
+    background-size: 57%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .venue-item-space {
-    background: url(./images/venues/space.png) no-repeat;
-    background-size: contain;
+    background-size: 33%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .venue-item-playstation {
-    background: url(./images/venues/playstation.png) no-repeat;
-    background-size: contain;
+    background-size: 65%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .venue-item-webster {
-    background: url(./images/venues/webster.png) no-repeat;
-    background-size: contain;
+    background-size: 67%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .venue-item-studio-151 {
-    background: url(./images/venues/studio-151.png) no-repeat;
-    background-size: contain;
+    background-size: 26%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .venue-item-thai-rock {
-    background: url(./images/venues/thai-rock.png) no-repeat;
-    background-size: contain;
+    background-size: 23%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
 .venue-item-esquina {
-    background: url(./images/venues/esquina.png) no-repeat;
-    background-size: contain;
+    background-size: 23%;
+    background-repeat: no-repeat;
     background-position: center;
 }
 
