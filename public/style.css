@@ -266,10 +266,6 @@ label {
 
 
 /* #region --------- Music --------- */
-.music {
-    
-}
-
 .music-bg-layer {
     background: url(./images/landing-bg-layer.jpg) no-repeat;
     background-size: cover;
@@ -342,6 +338,10 @@ label {
 
 
 /* #region --------- Venues --------- */
+.carousel .slide {
+    background: transparent !important;
+}
+
 .venue-items > div {
     flex: 1 0 25%;
     height: 82px;
