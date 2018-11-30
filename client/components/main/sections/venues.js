@@ -36,8 +36,9 @@ export class Venues extends Component {
           showIndicators={false}
           showThumbs={false}
           infiniteLoop={true}
-          autoplay={true}
-          transitionTime={1000}
+          autoPlay={true}
+          interval={10000}
+          transitionTime={1500}
         >
           
           {partVenues.length && partVenues.map(venueArr => {
