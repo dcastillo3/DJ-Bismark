@@ -343,7 +343,8 @@ label {
     width: 225px;
     background-repeat: no-repeat;
     background-size: cover;
-    flex: 25%;
+    flex: calc(25% - 20px);
+    margin: 10px;
 }
 
 
