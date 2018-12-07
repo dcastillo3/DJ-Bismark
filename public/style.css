@@ -157,7 +157,9 @@ label {
 }
 
 .subtitle {
-    font-size: 16px;
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
 }
 
 .article-title {
@@ -202,6 +204,14 @@ label {
 
 .bottom-blue {
     border-bottom: 4px solid rgb(72, 155, 199);
+}
+
+.bottom-white {
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.bottom-light-red {
+    border-bottom: 1px solid rgb(255, 190, 190);
 }
 
 /* #endregion ------ Palettes --------- */
@@ -419,10 +429,38 @@ label {
 .footer-columns {
     width: 100%;
     justify-content: space-between;
+    padding-bottom: 100px;
 }
 
 .footer-columns > div {
-    flex: 25%;
+    flex: calc(25% - 20px);
+    margin: 10px;
 }
+
+.footer-column-contact-logo {
+    width: 100px;
+    height: 77px;
+    background: url(./images/bismark-logo-small.png) no-repeat;
+    background-size: contain;
+    background-position: top center;
+}
+
+.footer-bottom-text-subtitle {
+    color: rgb(111, 255, 95);
+}
+
+.footer-social {
+    min-width: 20px;
+    align-self: center;
+}
+
+.footer-column-social-text {
+    margin-left: 10px;
+}
+
+.footer-bottom-text-title {
+    color: rgb(255, 108, 108);
+}
+
 
 /* #endregion --------- Footer --------- */
