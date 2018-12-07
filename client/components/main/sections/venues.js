@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "style-loader!css-loader!react-responsive-carousel/lib/styles/carousel.min.css";
 import { partition, getFileName } from '../../../utilities';
