@@ -1,30 +1,28 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import "style-loader!css-loader!react-responsive-carousel/lib/styles/carousel.min.css";
 import { partition, getFileName } from '../../../utilities';
+import axios from 'axios';
 
 export class Venues extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      venues: [
-        {name: 'Moschino', imageUrl: 'images/venues/moschino.png'},
-        {name: 'Pianos', imageUrl: 'images/venues/pianos.png'},
-        {name: 'The Lately', imageUrl: 'images/venues/lately.png'},
-        {name: 'The Handy Liquor Bar', imageUrl: 'images/venues/handy.png'},
-        {name: 'Slate', imageUrl: 'images/venues/slate.png'},
-        {name: 'Space Ibiza: New York', imageUrl: 'images/venues/space.png'},
-        {name: 'Playstation Theater', imageUrl: 'images/venues/playstation.png'},
-        {name: 'Webster Hall: New York City', imageUrl: 'images/venues/webster.png'},
-        {name: 'Studio 151', imageUrl: 'images/venues/studio-151.png'},
-        {name: 'Thai Rock: New York City', imageUrl: 'images/venues/thai-rock.png'},
-        {name: 'La Esquina: New York City', imageUrl: 'images/venues/esquina.png'},
-      ]
+      venues: []
     }
   }
 
+  componentDidMount() {
+    this.getVenues();
+  }
+
+  async getVenues() {
+    const res = await axios.get('/api/images/venues');
+    this.setState({venues: res.data});
+  }
+
   render() {
-    const { venues } =  this.state;
+    const { venues } = this.state;
     const partVenues = partition(venues, 4);
 
     return (
@@ -46,10 +44,10 @@ export class Venues extends Component {
               <div className="venue-items flex-row flex-center">
 
                 {venueArr.length && venueArr.map(venue => {
-                  const { imageUrl } = venue;
-                  const imageName = getFileName(imageUrl);
+                  const { url } = venue;
+                  const imageName = getFileName(url);
                   const venueImage = {
-                    backgroundImage: `url(${imageUrl})`
+                    backgroundImage: `url(${url})`
                   }
 
                   return (

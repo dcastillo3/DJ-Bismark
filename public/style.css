@@ -337,6 +337,19 @@ label {
 /* #endregion --------- Music --------- */
 
 
+/* #region --------- Photos --------- */
+.photo-items > div {
+    height: 225px;
+    width: 225px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: 25%;
+}
+
+
+/* #endregion --------- Photos --------- */
+
+
 /* #region --------- Venues --------- */
 .carousel .slide {
     background: transparent !important;
@@ -346,72 +359,52 @@ label {
     flex: 1 0 25%;
     height: 82px;
     width: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .venue-item-moschino {
     background-size: 54%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venue-item-pianos {
     background-size: 31%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venue-item-lately {
     background-size: 55%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venue-item-handy {
     background-size: 32%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venue-item-slate {
     background-size: 57%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venue-item-space {
     background-size: 33%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venue-item-playstation {
     background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venue-item-webster {
     background-size: 67%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venue-item-studio-151 {
     background-size: 26%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venue-item-thai-rock {
     background-size: 23%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 .venue-item-esquina {
     background-size: 23%;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 

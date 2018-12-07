@@ -38,7 +38,9 @@
   "dependencies": {
     "@material-ui/core": "^3.3.2",
     "@material-ui/icons": "^3.0.1",
+    "aws-sdk": "^2.368.0",
     "axios": "^0.15.3",
+    "chalk": "^2.4.1",
     "compression": "^1.7.1",
     "connect-session-sequelize": "^4.1.0",
     "css-loader": "^1.0.1",
