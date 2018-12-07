@@ -416,5 +416,13 @@ label {
 .footer {
 }
 
+.footer-columns {
+    width: 100%;
+    justify-content: space-between;
+}
+
+.footer-columns > div {
+    flex: 25%;
+}
 
 /* #endregion --------- Footer --------- */
