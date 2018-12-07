@@ -424,6 +424,7 @@ label {
 
 /* #region --------- Footer --------- */
 .footer {
+    border-top: 14px solid rgb(255, 190, 190);
 }
 
 .footer-columns {
