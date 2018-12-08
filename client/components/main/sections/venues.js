@@ -39,9 +39,9 @@ export class Venues extends Component {
           transitionTime={1500}
         >
           
-          {partVenues.length && partVenues.map(venueArr => {
+          {partVenues.length && partVenues.map((venueArr, index) => {
             return (
-              <div className="venue-items flex-row flex-center">
+              <div key={`key-${index}`} className="venue-items flex-row flex-center">
 
                 {venueArr.length && venueArr.map(venue => {
                   const { url } = venue;
@@ -51,7 +51,7 @@ export class Venues extends Component {
                   }
 
                   return (
-                    <div className={`venue-item-${imageName}`} style={venueImage}></div>
+                    <div key={imageName} className={`venue-item-${imageName}`} style={venueImage}></div>
                   )
                 })}
 
