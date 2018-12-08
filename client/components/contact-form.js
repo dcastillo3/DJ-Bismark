@@ -24,16 +24,13 @@ export class ContactForm extends Component {
 
     formChange[name] = value;
     this.setState(formChange);
-    console.log(`FORM CHANGE: ${name} ${value}`)
   }
 
   contactFormSubmit = (e) => {
     e.preventDefault();
-    console.log('SUBMITTED STATE: ', this.state)
   }
 
   render() {
-    console.log('CURRENT STATE: ', this.state)
 
     return (
       <div id="contact" className="contact-form-section flex-column flex-center palette-three">
