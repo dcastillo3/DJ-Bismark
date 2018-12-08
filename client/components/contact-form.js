@@ -1,57 +1,61 @@
-import React from 'react'
+import React, { Component } from 'react';
 
-export const ContactForm = props => {
+export class ContactForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
 
-  return (
-    <div id="contact" className="contact-form-container flex-column flex-center palette-three">
-        <form className="flex-row flex-center large-padding narrow-content">
-          <div className="form-group flex-column">
-            <label>First</label>
-            <input />
+    }
+  }
+
+  render() {
+    return (
+      <div id="contact" className="contact-form-section flex-column flex-center palette-three">
+          
+          <div className="contact-form-container flex-row flex-center large-padding narrow-content">
+            <form className="contact-form flex-row flex-center">
+              <div className="contact-form-input form-group flex-column">
+                <input placeholder="First" />
+              </div>
+    
+              <div className="contact-form-input form-group flex-column">
+                <input placeholder="Last" />
+              </div>
+    
+              <div className="contact-form-input form-group flex-column">
+                <input placeholder="Email" />
+              </div>
+    
+              <div className="contact-form-input form-group flex-column">
+                <input placeholder="Phone" />
+              </div>
+    
+              <div className="contact-form-input form-group flex-column">
+                <input placeholder="Organization" />
+              </div>
+    
+              <div className="contact-form-input form-group flex-column">
+                <input placeholder="Venue" />
+              </div>
+    
+              <div className="contact-form-input form-group flex-column">
+                <input placeholder="Location" />
+              </div>
+    
+              <div className="contact-form-input form-group flex-column">
+                <input placeholder="Date" />
+              </div>
+    
+              <div className="contact-form-textarea form-group flex-column">
+                <textarea placeholder="Comments" />
+              </div>
+            </form>
           </div>
 
-          <div className="form-group flex-column">
-            <label>Last</label>
-            <input />
-          </div>
+      </div>
+    )
 
-          <div className="form-group flex-column">
-            <label>Email</label>
-            <input />
-          </div>
-
-          <div className="form-group flex-column">
-            <label>Phone</label>
-            <input />
-          </div>
-
-          <div className="form-group flex-column">
-            <label>Organization</label>
-            <input />
-          </div>
-
-          <div className="form-group flex-column">
-            <label>Venue</label>
-            <input />
-          </div>
-
-          <div className="form-group flex-column">
-            <label>Location</label>
-            <input />
-          </div>
-
-          <div className="form-group flex-column">
-            <label>Date</label>
-            <input />
-          </div>
-
-          <div className="form-group flex-column">
-            <label>Comments</label>
-            <textarea />
-          </div>
-        </form>
-    </div>
-  )
+  }
 }
 
 export default ContactForm
