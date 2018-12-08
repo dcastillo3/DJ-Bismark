@@ -434,6 +434,20 @@ textarea {
 
 
 /* #region --------- Contact --------- */
+.contact-form-container > * {
+    flex: calc(50% - 80px);
+}
+
+.contact-form-text-container,
+.contact-form-text,
+.contact-form-text-icon {
+    align-self: flex-start;
+}
+
+.contact-form-text-icon {
+    font-size: 220px;
+}
+
 .contact-form > div > input,
 .contact-form > div > textarea {
     width: calc(100% - 34px);
