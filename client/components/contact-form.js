@@ -4,15 +4,15 @@ export class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      organization: '',
-      venue: '',
-      location: '',
-      date: '',
-      comments: ''
+      First: '',
+      Last: '',
+      Email: '',
+      Phone: '',
+      Organization: '',
+      Venue: '',
+      Location: '',
+      Date: '',
+      Comments: ''
     }
   }
 
@@ -31,6 +31,8 @@ export class ContactForm extends Component {
   }
 
   render() {
+    const contactForm = this.state;
+    const fields = Object.keys(contactForm);
 
     return (
       <div id="contact" className="contact-form-section flex-column flex-center palette-three">
@@ -42,40 +44,20 @@ export class ContactForm extends Component {
             </div>
 
             <form onSubmit={this.contactFormSubmit} className="contact-form flex-row flex-center">
-              <div className="contact-form-input form-group flex-column">
-                <input value={this.state.firstName} name="firstName" placeholder="First" onChange={this.contactFormChange} />
-              </div>
-    
-              <div className="contact-form-input form-group flex-column">
-                <input value={this.state.lastName} name="lastName" placeholder="Last" onChange={this.contactFormChange} />
-              </div>
-    
-              <div className="contact-form-input form-group flex-column">
-                <input value={this.state.email} name="email" placeholder="Email" onChange={this.contactFormChange} />
-              </div>
-    
-              <div className="contact-form-input form-group flex-column">
-                <input value={this.state.phone} name="phone" placeholder="Phone" onChange={this.contactFormChange} />
-              </div>
-    
-              <div className="contact-form-input form-group flex-column">
-                <input value={this.state.organization} name="organization" placeholder="Organization" onChange={this.contactFormChange} />
-              </div>
-    
-              <div className="contact-form-input form-group flex-column">
-                <input value={this.state.venue} name="venue" placeholder="Venue" onChange={this.contactFormChange} />
-              </div>
-    
-              <div className="contact-form-input form-group flex-column">
-                <input value={this.state.location} name="location" placeholder="Location" onChange={this.contactFormChange} />
-              </div>
-    
-              <div className="contact-form-input form-group flex-column">
-                <input value={this.state.date} name="date" placeholder="Date" onChange={this.contactFormChange} />
-              </div>
-    
+
+              {fields.map(field => {
+                if (field !== 'Comments') {
+                  return (
+                    <div key={field} className="contact-form-input form-group flex-column">
+                      <input value={contactForm[field]} name={field} placeholder={field} onChange={this.contactFormChange} />
+                    </div>
+                  )
+                }
+              })
+              }
+
               <div className="contact-form-textarea form-group flex-column">
-                <textarea value={this.state.comments} name="comments" placeholder="Comments" onChange={this.contactFormChange} />
+                <textarea value={this.state.Comments} name="Comments" placeholder="Comments" onChange={this.contactFormChange} />
               </div>
 
               <button className="button" type="submit" value="submit">Submit</button>
