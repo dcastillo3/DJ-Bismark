@@ -49,7 +49,7 @@ export class ContactForm extends Component {
                 if (field !== 'Comments') {
                   return (
                     <div key={field} className="contact-form-input form-group flex-column">
-                      <input value={contactForm[field]} name={field} placeholder={field} onChange={this.contactFormChange} />
+                      <input value={contactForm[field]} name={field} placeholder={field} onChange={this.contactFormChange} required/>
                     </div>
                   )
                 }
