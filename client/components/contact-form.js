@@ -4,25 +4,26 @@ export class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      First: '',
-      Last: '',
-      Email: '',
-      Phone: '',
-      Organization: '',
-      Venue: '',
-      Location: '',
-      Date: '',
-      Comments: ''
+      First: { value: '', type: 'text', required: 'true'},
+      Last: { value: '', type: 'text', required: 'true' },
+      Email: { value: '', type: 'email', required: 'true' },
+      Phone: { value: '', type: 'number', required: 'true' },
+      Organization: { value: '', type: 'text', required: 'true' },
+      Venue: { value: '', type: 'text', required: 'true' },
+      Location: { value: '', type: 'text', required: 'true' },
+      Date: { value: '', type: 'date', required: 'true' },
+      Comments: { value: '', type: 'text', required: 'false' }
     }
   }
 
   contactFormChange = (e) => {
     const { name } = e.target;
     const { value } = e.target;
-    const formChange = {
-    }
+    const formChange = { 
+      [name]: {...this.state[name]}
+    };
 
-    formChange[name] = value;
+    formChange[name].value = value;
     this.setState(formChange);
   }
 
@@ -32,7 +33,8 @@ export class ContactForm extends Component {
 
   render() {
     const contactForm = this.state;
-    const fields = Object.keys(contactForm);
+    const fields = Object.keys(this.state);
+    console.log(this.state)
 
     return (
       <div id="contact" className="contact-form-section flex-column flex-center palette-three">
@@ -49,16 +51,18 @@ export class ContactForm extends Component {
                 if (field !== 'Comments') {
                   return (
                     <div key={field} className="contact-form-input form-group flex-column">
-                      <input value={contactForm[field]} name={field} placeholder={field} onChange={this.contactFormChange} />
+                      <input type={contactForm[field].type} value={contactForm[field].value} name={field} placeholder={field} onChange={this.contactFormChange} required={contactForm[field].required} />
+                    </div>
+                  )
+                } else {
+                  return (
+                    <div key={field} className="contact-form-textarea form-group flex-column">
+                      <textarea type={contactForm[field].type} value={this.state.Comments.value} name="Comments" placeholder="Comments" onChange={this.contactFormChange} required={contactForm[field].required} />
                     </div>
                   )
                 }
               })
               }
-
-              <div className="contact-form-textarea form-group flex-column">
-                <textarea value={this.state.Comments} name="Comments" placeholder="Comments" onChange={this.contactFormChange} />
-              </div>
 
               <button className="button" type="submit" value="submit">Submit</button>
             </form>
