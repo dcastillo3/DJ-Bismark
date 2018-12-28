@@ -4,15 +4,15 @@ export class ContactForm extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      First: { value: '', type: 'text', required: 'true'},
-      Last: { value: '', type: 'text', required: 'true' },
-      Email: { value: '', type: 'email', required: 'true' },
-      Phone: { value: '', type: 'number', required: 'true' },
-      Organization: { value: '', type: 'text', required: 'true' },
-      Venue: { value: '', type: 'text', required: 'true' },
-      Location: { value: '', type: 'text', required: 'true' },
-      Date: { value: '', type: 'date', required: 'true' },
-      Comments: { value: '', type: 'text', required: 'false' }
+      First: { value: '', type: 'text', required: 1},
+      Last: { value: '', type: 'text', required: 1 },
+      Email: { value: '', type: 'email', required: 1 },
+      Phone: { value: '', type: 'number', required: 1 },
+      Organization: { value: '', type: 'text', required: 1 },
+      Venue: { value: '', type: 'text', required: 1 },
+      Location: { value: '', type: 'text', required: 1 },
+      Date: { value: '', type: 'date', required: 1 },
+      Comments: { value: '', type: 'text', required: 0 }
     }
   }
 
@@ -34,7 +34,6 @@ export class ContactForm extends Component {
   render() {
     const contactForm = this.state;
     const fields = Object.keys(this.state);
-    console.log(this.state)
 
     return (
       <div id="contact" className="contact-form-section flex-column flex-center palette-three">
