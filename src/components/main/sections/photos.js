@@ -21,6 +21,7 @@ class Photos extends Component {
 
   render() {
     const { photos } = this.state;
+    console.log(photos);
 
     return (
       <div id="photos" className="photos flex-column flex-center palette-two">
