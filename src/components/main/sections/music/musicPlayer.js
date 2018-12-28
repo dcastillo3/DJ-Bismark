@@ -10,7 +10,7 @@ export const MusicPlayer = props => {
         width="100%" 
         height="100%" 
         scrolling="no" 
-        frameborder="no" 
+        frameBorder="no" 
         allow="autoplay" 
         src={mix}>
       </iframe>

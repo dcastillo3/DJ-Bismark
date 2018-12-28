@@ -34,7 +34,7 @@ class Photos extends Component {
             }
 
             return (
-              <div className={`photo-item-${imageName}`} style={photoImage}></div>
+              <div key={imageName} className={`photo-item-${imageName}`} style={photoImage}></div>
             )
           })}
         </div>
