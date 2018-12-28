@@ -13,6 +13,7 @@ router.get('/:type', (req, res, next) => {
     if (err) {
       console.log(err, err.stack)
     } else {
+      console.log('DATA IS: ', cleanS3Data(data, s3Client));
       res.send(cleanS3Data(data, s3Client))
     }
   })
