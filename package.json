@@ -1,20 +1,27 @@
 {
   "name": "dj-bismark-app",
+  "author": "Daniel Castillo",
+  "license": "MIT",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.3.2",
     "@material-ui/icons": "^3.0.1",
-    "aws-sdk": "^2.368.0",
+    "aws-sdk": "^2.382.0",
     "axios": "^0.15.3",
     "chalk": "^2.4.1",
+    "compression": "^1.7.3",
+    "express": "^4.16.4",
+    "express-session": "^1.15.6",
+    "morgan": "^1.9.1",
     "prop-types": "^15.5.8",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-scripts": "2.1.2",
     "react-responsive-carousel": "^3.1.43",
+    "react-scripts": "2.1.2",
     "react-scroll": "^1.7.10"
   },
+  "proxy": "http://localhost:8080",
   "devDependencies": {
     "nodemon": "^1.17.5"
   },
@@ -22,7 +29,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server/index.js"
   },
   "eslintConfig": {
     "extends": "react-app"
