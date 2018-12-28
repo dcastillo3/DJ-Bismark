@@ -3,6 +3,9 @@
   "author": "Daniel Castillo",
   "license": "MIT",
   "version": "0.1.0",
+  "engines": {
+    "node": ">= 7.0.0"
+  },
   "private": true,
   "dependencies": {
     "@material-ui/core": "^3.3.2",
