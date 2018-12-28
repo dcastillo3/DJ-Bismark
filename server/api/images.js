@@ -4,18 +4,14 @@ const {getPrefix, cleanS3Data} = require('../utilities');
 
 //AWS S3 get all images of type
 router.get('/:type', (req, res, next) => {
-  console.log('getting images');
   const params = {
     Bucket: `${process.env.AWS_S3_BUCKET}`,
     Prefix: getPrefix(req.originalUrl)
   }
-  console.log('PARAMS ARE:', params);
 
   s3Client.listObjects(params, (err, data) => {
     if (err) {
-      console.log('ERROR IS: ', err, err.stack);
     } else {
-      console.log('DATA IS: ', cleanS3Data(data, s3Client));
       res.send(cleanS3Data(data, s3Client))
     }
   })

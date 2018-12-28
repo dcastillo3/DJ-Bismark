@@ -40,7 +40,6 @@ export class Venues extends Component {
         >
           
           {partVenues.length && partVenues.map((venueArr, i) => {
-            console.log(venueArr);
             
             return (
               <div key={`venue-${i}`} className="venue-items flex-row flex-center">

@@ -35,6 +35,7 @@ const createApp = () => {
   // routes
   app.use('/api', require('./api'));
 
+  //Staticly serve build folder
   app.use(express.static(path.join(__dirname, '../build')));
 
   // error handling endware

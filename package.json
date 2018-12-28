@@ -31,8 +31,8 @@
   },
   "scripts": {
     "start": "npm run build & node server/index.js",
-    "start-dev-server": "npm run server",
-    "start-dev-client": "react-scripts start",
+    "start-dev": "react-scripts start",
+    "start-server": "npm run server",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
