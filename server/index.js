@@ -5,6 +5,7 @@ const compression = require('compression');
 // const db = require('./db');
 const PORT = process.env.PORT || 8080;
 const app = express();
+const path = require('path');
 module.exports = app;
 
 //Require secrets file in all modes except production
@@ -34,11 +35,17 @@ const createApp = () => {
   // routes
   app.use('/api', require('./api'));
 
+  app.use(express.static(path.join(__dirname, 'client/build')));
+
   // error handling endware
   app.use((err, req, res, next) => {
     console.error(err);
     console.error(err.stack);
     res.status(err.status || 500).send(err.message || 'Internal server error.');
+  })
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname + '/client/build/index.html'))
   })
 }
 
