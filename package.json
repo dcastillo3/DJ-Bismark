@@ -33,7 +33,7 @@
     "start": "npm run build & node server/index.js",
     "start-dev": "react-scripts start",
     "start-server": "npm run server",
-    "deploy": "scripts/deploy",
+    "deploy": "bash script/deploy",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
