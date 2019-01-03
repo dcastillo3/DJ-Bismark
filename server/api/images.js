@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const s3Client = require('../s3Client');
-const {getPrefix, cleanS3Data} = require('../utilities');
+const {getPrefix, cleanS3Data} = require('../utilities').utility;
+
 
 //AWS S3 get all images of type
 router.get('/:type', (req, res, next) => {
