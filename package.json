@@ -32,8 +32,9 @@
   },
   "scripts": {
     "start": "npm run build & node server/index.js",
-    "start-dev": "react-scripts start",
+    "start-react": "react-scripts start",
     "start-server": "npm run server",
+    "start-mac": "react-scripts start & nodemon server/index.js",
     "deploy": "bash script/deploy",
     "build": "react-scripts build",
     "test": "react-scripts test",
