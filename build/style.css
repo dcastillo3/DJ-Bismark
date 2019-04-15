@@ -1,0 +1,511 @@
+/* #region --------- Fonts --------- */
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+
+
+/* #endregion ------ Fonts --------- */
+
+
+/* #region --------- Global --------- */
+body {
+    color: #000;
+    background: #0e0e0e;
+    margin: 0;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 16px;
+}
+
+
+a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    color: #a0a0a0;
+}
+
+.form-group {
+    justify-content: center;
+    align-items: flex-start;
+}
+
+input {
+    background-color: #f4f9fb;
+    border: 0;
+    box-shadow: 0px 1px 1px 0px #E6E9EC;
+    color: #555;
+    margin: 7px;
+    font-size: 12px;
+    height: 26px;
+    padding: 0px 10px;
+    border-radius: 4px;
+}
+
+input:focus {
+    outline-offset: 0px;
+    outline: none;
+    transition: .3s ease-in-out;
+    background: #fff8e6;
+    box-shadow: 0px 1px 1px 0px #f9c4ad;
+    border: 0px;
+}
+
+label {
+    padding: 10px 0px;
+    font-size: 35px;
+}
+
+textarea {
+    background-color: #f4f9fb;
+    border: 0;
+    box-shadow: 0px 1px 1px 0px #E6E9EC;
+    color: #555;
+    margin: 7px;
+    font-size: 12px;
+    height: 104px;
+    padding: 0px 10px;
+    border-radius: 4px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.element-center {
+    margin: 0 auto;
+}
+
+.narrow-content {
+    max-width: 900px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-full-grid > * {
+    flex: 1;
+}
+
+.menu-items > * {
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+
+.overlay-parent {
+    position: relative;
+}
+
+.overlay-element {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+
+/* #endregion ------ Global --------- */
+
+
+/* #region ------ Spacing --------- */
+.mini-padding {
+    padding: 5px 0;
+}
+
+.small-padding {
+    padding: 10px;
+}
+
+.medium-padding {
+    padding: 30px 40px;
+}
+
+.large-padding {
+    padding: 60px 40px;
+}
+
+.mini-margin {
+    margin: 5px 0;
+}
+
+.small-margin {
+    margin: 10px 0;
+}
+
+.medium-margin {
+    margin: 30px 0;
+}
+
+.large-margin {
+    margin: 60px 0;
+}
+
+
+/* #endregion ------ Spacing --------- */
+
+
+/* #region --------- Titles --------- */
+.title {
+    font-size: 40px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.subtitle {
+    font-size: 23px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.article-title {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+/* #endregion ------ Titles --------- */
+
+
+/* #region --------- Palettes --------- */
+.palette-one {
+    background-color: rgb(171, 71, 71);
+    color: rgb(247, 247, 247);
+}
+
+.palette-one-transparent {
+    background-color: rgba(193, 0, 3, 0.6);
+    color: #fff;
+}
+
+.palette-two {
+    background-color: rgb(1, 23, 41);
+    color: rgb(255, 255, 255);
+}
+
+.palette-two-transparent {
+    background-color: #1657862e;
+    color: #fff;
+}
+
+.palette-three {
+    background-color: rgb(234, 234, 234);
+    color: rgb(45, 45, 45);
+}
+
+.palette-four {
+    background-color: rgb(80, 99, 4);
+    color: rgb(247, 247, 247);
+}
+
+.bottom-blue {
+    border-bottom: 4px solid rgb(72, 155, 199);
+}
+
+.bottom-white {
+    border-bottom: 1px solid rgb(255, 255, 255);
+}
+
+.bottom-light-red {
+    border-bottom: 1px solid rgb(255, 190, 190);
+}
+
+/* #endregion ------ Palettes --------- */
+
+
+/* #region --------- Header --------- */
+.navbar {
+    margin-top: 20px;
+    height: 42px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 10;
+    flex-wrap: nowrap;
+}
+
+.social-media {
+    font-size: 18px;
+    justify-content: flex-end;
+}
+
+.logo {
+    width: 14vw;
+    height: 7vh;
+    background: url(./images/bismark-logo.png) no-repeat;
+    background-size: contain;
+    min-width: 260px;
+    min-height: 56px;
+    background-position-x: center;
+}
+
+
+/* #endregion --------- Header --------- */
+
+
+/* #region --------- Landing --------- */
+.main {
+    flex: auto;
+}
+
+.landing {
+    height: 61vh;
+}
+
+.landing-bg-layer {
+    background: url(./images/landing-bg-layer.jpg) no-repeat;
+    background-size: cover;
+}
+
+.landing-bismark-layer {
+    background: url(./images/landing-bismark-layer2.png) no-repeat;
+    background-size: cover;
+}
+
+.landing-video-layer-border {
+    align-self: flex-end;
+    margin: 4vw 4vw 0;
+    padding: 14px;
+}
+
+
+/* #endregion --------- Landing --------- */
+
+
+/* #region --------- Music --------- */
+.music-bg-layer {
+    background: url(./images/landing-bg-layer.jpg) no-repeat;
+    background-size: cover;
+}
+
+.music-laptop-layer {
+    background: url(./images/music-laptop-layer.png) no-repeat;
+    background-size: contain;
+    background-position: right;
+}
+
+.music-content {
+    width: 100%;
+    max-width: 1150px;
+    padding: 20px;
+}
+
+.music-content-row {
+    flex: 33.33%;
+}
+
+.track-container-row-1 {
+    flex: 25%;
+    position: relative;
+    top: 17px;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.track-container-row-2 {
+    flex: calc(75% - 60px);
+    margin-left: 60px;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+.music-content-row-border {
+    padding: 14px;
+    background: linear-gradient(0.25turn, #0e0e0e, #272727);
+}
+
+.music-mixes-container {
+    justify-content: flex-end;
+}
+
+.music-mix-track-container {
+    align-items: center;
+    z-index: 10;
+}
+
+.music-player {
+    padding: 14px;
+    position: absolute;
+    bottom: calc(12.5% - 28px);
+    left: 20px;
+    width: calc(75% - 28px);
+    height: calc(66.67% - 28px);
+}
+
+.music-mixes {
+    padding: 20px;
+    position: relative;
+    left: 89%;
+    bottom: 35%;
+    display: inline-block;
+}
+
+
+/* #endregion --------- Music --------- */
+
+
+/* #region --------- Photos --------- */
+.photo-items > div {
+    height: 225px;
+    width: 225px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    flex: calc(25% - 20px);
+    margin: 10px;
+}
+
+
+/* #endregion --------- Photos --------- */
+
+
+/* #region --------- Venues --------- */
+.carousel .slide {
+    background: transparent !important;
+}
+
+.venue-items > div {
+    flex: 1 0 25%;
+    height: 82px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.venue-item-moschino {
+    background-size: 54%;
+}
+
+.venue-item-pianos {
+    background-size: 31%;
+}
+
+.venue-item-lately {
+    background-size: 55%;
+}
+
+.venue-item-handy {
+    background-size: 32%;
+}
+
+.venue-item-slate {
+    background-size: 57%;
+}
+
+.venue-item-space {
+    background-size: 33%;
+}
+
+.venue-item-playstation {
+    background-size: 65%;
+}
+
+.venue-item-webster {
+    background-size: 67%;
+}
+
+.venue-item-studio-151 {
+    background-size: 26%;
+}
+
+.venue-item-thai-rock {
+    background-size: 23%;
+}
+
+.venue-item-esquina {
+    background-size: 23%;
+}
+
+
+/* #endregion --------- Venues --------- */
+
+
+/* #region --------- Contact --------- */
+.contact-form-container > * {
+    flex: calc(50% - 80px);
+}
+
+.contact-form-text-container,
+.contact-form-text,
+.contact-form-text-icon {
+    align-self: flex-start;
+}
+
+.contact-form-text-icon {
+    font-size: 220px;
+}
+
+.contact-form > div > input,
+.contact-form > div > textarea {
+    width: calc(100% - 34px);
+}
+
+.contact-form-input {
+    flex: 50%;
+}
+
+.contact-form-textarea {
+    flex: 100%;
+}
+
+
+/* #endregion --------- Contact --------- */
+
+
+/* #region --------- Footer --------- */
+.footer {
+    border-top: 14px solid rgb(255, 190, 190);
+}
+
+.footer-columns {
+    width: 100%;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.footer-columns > div {
+    flex: calc(25% - 20px);
+    margin: 10px;
+}
+
+.footer-column-contact-logo {
+    width: 100px;
+    height: 77px;
+    background: url(./images/bismark-logo-small.png) no-repeat;
+    background-size: contain;
+    background-position: top center;
+}
+
+.footer-bottom-text-subtitle {
+    color: rgb(111, 255, 95);
+}
+
+.footer-social {
+    min-width: 20px;
+    align-self: center;
+}
+
+.footer-column-social-text {
+    margin-left: 10px;
+}
+
+.footer-bottom-text-title {
+    color: rgb(255, 108, 108);
+}
+
+
+/* #endregion --------- Footer --------- */
