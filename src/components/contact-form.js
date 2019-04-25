@@ -34,6 +34,7 @@ export class ContactForm extends Component {
   render() {
     const contactForm = this.state;
     const fields = Object.keys(this.state);
+    console.log(this.state);
 
     return (
       <div id="contact" className="contact-form-section flex-column flex-center palette-three">
