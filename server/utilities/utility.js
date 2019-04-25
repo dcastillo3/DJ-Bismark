@@ -30,11 +30,35 @@ const cleanS3Data = (s3Data, s3Client) => {
     return cleanData;
 }
 
+const parseFormData = (formData) => {
+  let emailInfo = {
+    replyTo: formData.Email.value,
+    subject: '',
+    html: ''
+  }
+
+  //fill subject
+  let subject = 'DJ Bismark | New Booking Request'
+  emailInfo.subject += subject;
+  
+  //fill header html
+  let header = '<p>Hi DJ Bismark,</p><p>You have a new booking request, the details are below:</p>';
+  emailInfo.html += header;
+  
+  //fill body html
+  for (let field in formData) {
+    emailInfo.html += `<p><strong>${field}: </strong>${formData[field].value}</p>`;
+  }
+
+  return emailInfo;
+}
+
 //Object to export
 const Utilities = {
   trailingSlash,
   getPrefix,
-  cleanS3Data
+  cleanS3Data,
+  parseFormData
 }
 
 module.exports = Utilities;

@@ -1,10 +1,12 @@
 const router = require('express').Router();
-const { sendMail } = require('../utilities');
+const { sendMail, utility } = require('../utilities');
+const { parseFormData } = require('../utilities').utility;
 
 // Nodemailer: Send mail
 router.post('/', (req, res, next) => {
-    const { to, subject, text } = req.body;
-    sendMail(to, subject, text);
+    const emailInfo = parseFormData(req.body);
+
+    sendMail(emailInfo);
 
     res.sendStatus(201);
 })

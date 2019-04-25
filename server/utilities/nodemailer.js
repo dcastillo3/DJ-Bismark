@@ -17,12 +17,11 @@ const transporter = nodemailer.createTransport({
 })
 
 //sendmail
-const sendMail = (to, subject, text) => {
+const sendMail = (emailInfo) => {
     const options = {
-        from: process.env.NODEMAILER_EMAIL,
-        to,
-        subject,
-        text
+        from: 'doNotReply@dj-bismark.herokuapp.com',
+        to: process.env.NODEMAILER_EMAIL,
+        ...emailInfo
     }
 
     transporter.sendMail(options, (err, info) => {
