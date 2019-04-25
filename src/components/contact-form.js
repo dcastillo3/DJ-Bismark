@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 export class ContactForm extends Component {
   constructor(props) {
@@ -29,12 +30,15 @@ export class ContactForm extends Component {
 
   contactFormSubmit = (e) => {
     e.preventDefault();
+
+    axios.post('/api/mail', this.state)
+    .then(res => console.log(res))
+    .catch(err => console.log(err))
   }
 
   render() {
     const contactForm = this.state;
     const fields = Object.keys(this.state);
-    console.log(this.state);
 
     return (
       <div id="contact" className="contact-form-section flex-column flex-center palette-three">
