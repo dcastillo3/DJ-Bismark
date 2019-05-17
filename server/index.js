@@ -2,7 +2,6 @@ const express = require('express');
 const morgan = require('morgan');
 const compression = require('compression');
 // const session = require('express-session');
-// const db = require('./db');
 const PORT = process.env.PORT || 8080;
 const app = express();
 const path = require('path');
@@ -10,6 +9,8 @@ module.exports = app;
 
 //Require secrets file in all modes except production
 if (process.env.NODE_ENV !== 'production') require('../secrets');
+
+const db = require('./db');
 
 const createApp = () => {
   // logging middleware
@@ -60,6 +61,8 @@ const startListening = () => {
 async function bootApp() {
   await createApp();
   await startListening();
+  //connect to mongoDB
+  await db();
 }
 
 // This evaluates as true when this file is run directly from the command line,
