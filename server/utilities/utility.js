@@ -30,7 +30,23 @@ const cleanS3Data = (s3Data, s3Client) => {
     return cleanData;
 }
 
-const parseFormData = (formData) => {
+const validBookingRequest = (formData) => {
+  if(formData.First 
+    && formData.Last 
+    && formData.Email 
+    && formData.Phone
+    && formData.Organization
+    && formData.Venue
+    && formData.Location
+    && formData.Date
+    && formData.Comments) {
+      return true;
+    } else {
+      return false;
+    }
+}
+
+const parseBookingRequest = (formData) => {
   let emailInfo = {
     replyTo: formData.Email.value,
     subject: '',
@@ -58,7 +74,8 @@ const Utilities = {
   trailingSlash,
   getPrefix,
   cleanS3Data,
-  parseFormData
+  validBookingRequest,
+  parseBookingRequest
 }
 
 module.exports = Utilities;

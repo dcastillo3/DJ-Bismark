@@ -1,4 +1,4 @@
-const sendMail = require('./nodemailer');
+const { sendMail } = require('./nodemailer');
 const utility = require('./utility');
 
 module.exports = {

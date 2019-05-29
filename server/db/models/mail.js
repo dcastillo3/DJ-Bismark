@@ -1,52 +1,52 @@
 const mongoose = require('mongoose');
 
 //research mongoose schema validation for objects
-const emailSchema = new mongoose.Schema({
+const bookingRequest = new mongoose.Schema({
     First: {
         value: String,
-        type: String,
+        formType: String,
         required: Number
     },
     Last: {
         value: String,
-        type: String,
+        formType: String,
         required: Number
     },
     Email: {
         value: String,
-        type: String,
+        formType: String,
         required: Number
     },
     Phone: {
         value: String,
-        type: String,
+        formType: String,
         required: Number
     },
     Organization: {
         value: String,
-        type: String,
+        formType: String,
         required: Number
     },
     Venue: {
         value: String,
-        type: String,
+        formType: String,
         required: Number
     },
     Location: {
         value: String,
-        type: String,
+        formType: String,
         required: Number
     },
     Date: {
-        value: String,
-        type: Date,
+        value: Date,
+        formType: String,
         required: Number
     },
     Comments: {
         value: String,
-        type: String,
+        formType: String,
         required: Number
     }
 })
 
-module.exports = mongoose.model('Mail', emailSchema);
+module.exports = mongoose.model('Booking Request', bookingRequest);

@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@dj-bismark-i7qna.mongodb.net/test?retryWrites=true`;
+const mongoURI = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@dj-bismark-i7qna.mongodb.net/dj-bismark?retryWrites=true`;
 const mongoOptions = {
     useNewUrlParser: true,
 };

@@ -1,5 +1,5 @@
-const Mail = require('./mail');
+const BookingRequest = require('./mail');
 
 module.exports = {
-    Mail
+    BookingRequest
 }
