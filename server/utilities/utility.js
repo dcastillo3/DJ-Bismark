@@ -47,6 +47,16 @@ const validBookingRequest = (formData) => {
 }
 
 const parseBookingRequest = (formData) => {
+  let sanitizedObj = {};
+
+  for(let field in formData) {
+    sanitizedObj[field] = formData[field].value;
+  }
+
+  return sanitizedObj;
+}
+
+const parseBookingRequestEmail = (formData) => {
   let emailInfo = {
     replyTo: formData.Email.value,
     subject: '',
@@ -75,7 +85,8 @@ const Utilities = {
   getPrefix,
   cleanS3Data,
   validBookingRequest,
-  parseBookingRequest
+  parseBookingRequest,
+  parseBookingRequestEmail
 }
 
 module.exports = Utilities;

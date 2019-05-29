@@ -6,7 +6,7 @@ router.post('/request', (req, res, next) => {
     let emailInfo;
 
     if(utility.validBookingRequest(req.body)) {
-        emailInfo = utility.parseBookingRequest(req.body);
+        emailInfo = utility.parseBookingRequestEmail(req.body);
     } else {
         throw new Error('Invalid email format');
     }

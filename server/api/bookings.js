@@ -4,14 +4,16 @@ const { utility } = require('../utilities');
 
 // MongoDB: Save booking request
 router.post('/request', (req, res, next) => {
-    let currBookingRequest;
+    let bookingInfo;
 
     if(utility.validBookingRequest(req.body)) {
-        currBookingRequest = new BookingRequest(req.body);
+        bookingInfo = utility.parseBookingRequest(req.body);
     } else {
         throw new Error('Invalid booking format');
     }
-    
+
+    const currBookingRequest = new BookingRequest(bookingInfo);
+
     currBookingRequest.save((err, data) => {
         if(err) console.log(err);
         else {
