@@ -17,7 +17,7 @@ export class ContactForm extends Component {
         Date: { value: '', formType: 'date', required: 1 },
         Comments: { value: '', formType: 'text', required: 0 }
       },
-      captcha: false
+      captcha: true
     }
   }
 
@@ -25,11 +25,14 @@ export class ContactForm extends Component {
     const { name } = e.target;
     const { value } = e.target;
     const formChange = {
+      ...this.state.formData,
       [name]: { ...this.state.formData[name] }
     };
 
     formChange[name].value = value;
-    this.setState({formData: formChange});
+    this.setState({
+      formData: formChange
+    });
   }
 
   contactFormSubmit = (e) => {
@@ -45,13 +48,14 @@ export class ContactForm extends Component {
 
   toggleCaptcha = () => {
     this.setState({
-      captcha: true
+      captcha: false
     })
   }
 
   render() {
-    const contactForm = this.state;
-    const fields = Object.keys(this.state);
+    const contactForm = this.state.formData;
+    const fields = Object.keys(this.state.formData);
+    console.log(this.state);
 
     return (
       <div id="contact" className="contact-form-section flex-column flex-center palette-three">
@@ -74,19 +78,19 @@ export class ContactForm extends Component {
               } else {
                 return (
                   <div key={field} className="contact-form-textarea form-group flex-column">
-                    <textarea type={contactForm[field].formType} value={this.state.Comments.value} name="Comments" placeholder="Comments" onChange={this.contactFormChange} required={contactForm[field].required} />
+                    <textarea type={contactForm[field].formType} value={this.state.formData.Comments.value} name="Comments" placeholder="Comments" onChange={this.contactFormChange} required={contactForm[field].required} />
                   </div>
                 )
               }
             })
             }
 
-            <button className="button" type="submit" value="submit">Submit</button>
+            <button className="button" type="submit" disabled={this.state.captcha} value="submit">Submit</button>
           </form>
           <div className="recaptcha">
             <ReCAPTCHA
-              sitekey="Your client site key"
-              onChange={this.toggleCaptcha()}
+              sitekey='6LcR-aYUAAAAAHqw1sDswzEYBTSdWKveHwVRs1_l'
+              onChange={this.toggleCaptcha}
             />,
             </div>
         </div>
