@@ -24,15 +24,17 @@ export class ContactForm extends Component {
   contactFormChange = (e) => {
     const { name } = e.target;
     const { value } = e.target;
-    const formChange = {
-      ...this.state.formData,
-      [name]: { ...this.state.formData[name] }
-    };
 
-    formChange[name].value = value;
-    this.setState({
-      formData: formChange
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      formData: {
+        ...prevState.formData,
+        [name]: {
+          ...prevState.formData[name],
+          value
+        }
+      }
+    }))
   }
 
   contactFormSubmit = (e) => {
@@ -47,9 +49,10 @@ export class ContactForm extends Component {
   }
 
   toggleCaptcha = () => {
-    this.setState({
+    this.setState( prevState => ({
+      ...prevState,
       captcha: false
-    })
+    }))
   }
 
   render() {
@@ -84,15 +87,16 @@ export class ContactForm extends Component {
               }
             })
             }
-
-            <button className="button" type="submit" disabled={this.state.captcha} value="submit">Submit</button>
-          </form>
-          <div className="recaptcha">
+            
+            <div className="recaptcha">
             <ReCAPTCHA
               sitekey='6LcR-aYUAAAAAHqw1sDswzEYBTSdWKveHwVRs1_l'
               onChange={this.toggleCaptcha}
-            />,
+            />
             </div>
+
+            <button className="button" type="submit" disabled={this.state.captcha} value="submit">Submit</button>
+          </form>
         </div>
 
       </div>
