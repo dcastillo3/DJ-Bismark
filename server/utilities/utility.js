@@ -46,12 +46,14 @@ const validBookingRequest = (formData) => {
     }
 }
 
-const parseBookingRequest = (formData) => {
+const parseUnconfirmedBookingRequest = (formData) => {
   let sanitizedObj = {};
 
   for(let field in formData) {
     sanitizedObj[field] = formData[field].value;
   }
+
+  sanitizedObj.Status = 'unconfirmed';
 
   return sanitizedObj;
 }
@@ -85,7 +87,7 @@ const Utilities = {
   getPrefix,
   cleanS3Data,
   validBookingRequest,
-  parseBookingRequest,
+  parseUnconfirmedBookingRequest,
   parseBookingRequestEmail
 }
 

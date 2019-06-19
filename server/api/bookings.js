@@ -7,7 +7,7 @@ router.post('/request', (req, res, next) => {
     let bookingInfo;
 
     if(utility.validBookingRequest(req.body)) {
-        bookingInfo = utility.parseBookingRequest(req.body);
+        bookingInfo = utility.parseUnconfirmedBookingRequest(req.body);
     } else {
         throw new Error('Invalid booking format');
     }
