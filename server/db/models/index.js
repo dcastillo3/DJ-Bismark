@@ -1,4 +1,4 @@
-const BookingRequest = require('./mail');
+const BookingRequest = require('./bookingRequest');
 
 module.exports = {
     BookingRequest

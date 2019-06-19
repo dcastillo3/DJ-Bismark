@@ -53,7 +53,7 @@ const parseUnconfirmedBookingRequest = (formData) => {
     sanitizedObj[field] = formData[field].value;
   }
 
-  sanitizedObj.status = 'unconfirmed';
+  sanitizedObj.Status = 'unconfirmed';
 
   return sanitizedObj;
 }

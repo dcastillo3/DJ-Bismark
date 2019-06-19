@@ -10,7 +10,8 @@ const BookingRequest = new mongoose.Schema({
     Venue: String,
     Location: String,
     Date: Date,
-    Comments: String
+    Comments: String,
+    Status: String
 })
 
 module.exports = mongoose.model('Booking Request', BookingRequest);
