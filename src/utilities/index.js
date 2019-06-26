@@ -24,3 +24,15 @@ export const getFileName = url => {
     
     return url.slice(lastSlash + 1, lastDot);
 }
+
+//Filter booking requests by status
+export const filterRequestsByStatus = (bookingRequests) => {
+    let filteredObj = {};
+
+    bookingRequests.forEach(request => {
+        if(!filteredObj[request.Status]) filteredObj[request.Status] = [request];
+        else filteredObj[request.Status].push(request);
+    })
+
+    return filteredObj;
+}
