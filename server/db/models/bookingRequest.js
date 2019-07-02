@@ -33,7 +33,6 @@ const BookingRequest = new mongoose.Schema({
     Date: {
         type: Date,
         required: true,
-        default: Date.now()
     },
     Comments: {
         type: String
@@ -41,8 +40,8 @@ const BookingRequest = new mongoose.Schema({
     Status: {
         type: String,
         required: true,
-        enum: ['confirmed', 'unconfirmed'],
-        default: 'unconfirmed'
+        enum: ['Confirmed', 'Unconfirmed'],
+        default: 'Unconfirmed'
     }
 })
 

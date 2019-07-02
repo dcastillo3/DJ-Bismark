@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { filterRequestsByStatus } from '../utilities';
+import { StatusColumn } from './components';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -26,31 +27,16 @@ class Dashboard extends Component {
     let bookings = this.state;
 
     return (
-      <div className="dashboard flex-row palette-three">
-        {statuses.map(status => {
-          return (
-            <div key={status} className={`dashboard-${status} flex-column medium-padding palette-two`}>
-              <div className={`dashboard-${status}-title`}>{status}</div>
-              {bookings[status].map(booking => {
-                //TO DO: sort booking fields (First Name, Last Name, etc)
-                let fields = Object.keys(booking);
+      <div className="dashboard flex-column palette-three">
+        <div className="dashboard-column flex-row palette-three">
+          {statuses.map(status => {
+            return (
+              <StatusColumn key={status} status={status} bookings={bookings} />
+            )
+          })}
+        </div>
 
-                return (
-                  <div key={booking._id} className={`dashboard-booking-${booking._id} flex-column small-padding small-margin palette-three`}>
-                    <div className="dashboard-booking-title">Booking: {booking._id}</div>
-                    {fields.map(field => {
-                      //TO DO: write field validator (base on cutomized fields)
-                      return field !== '_id' && field !== '__v' && field !== 'Status' 
-                        ? (
-                        <div key={booking._id + field} className={`dashboard-booking-${booking._id}-${field}`} >{`${field}: ${booking[field]}`}</div>
-                      ) : '';
-                    })}
-                  </div>
-                )
-              })}
-            </div>
-          )
-        })}
+
       </div>
     )
   }
