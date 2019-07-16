@@ -23,9 +23,9 @@ const Footer = () => (
 
         <div className="footer-column-contact flex-column">
           <div className="footer-column-container flex-column">
-            <div className="footer-bottom-text-subtitle bottom-light-red subtitle">Subtitle Here</div>
-            <div className="bottom-light-red">Column two text here.</div>
-            <div>Column three text here.</div>
+            <div className="footer-bottom-text-subtitle bottom-light-red subtitle">Exceptional Quality</div>
+            <div className="bottom-light-red">Groovy feel good</div>
+            <div>Smoothly mixed transitions</div>
           </div>
         </div>
 
@@ -65,8 +65,8 @@ const Footer = () => (
       </div>
 
       <div className="footer-bottom-text flex-column medium-padding flex-center">
-        <div className="footer-bottom-text-title title text-center">Some title here</div>
-        <div className="footer-bottom-text-content text-center">Some descriptive text that goes on for about a paragraph here. It also includes two sentences to make it a bit longer. Font size is much smaller than the title.</div>
+        <div className="footer-bottom-text-title title text-center">Music That Touches The Soul</div>
+        <div className="footer-bottom-text-content text-center">Kaytranada, Michael Jackson, Timbaland, Earth Wind and Fire, Anderson .Paak, Luther Van Dross, Leon Bridges, GoldLink, Prince, Pharrell Williams, Chic, The Spinners, Masego, FKJ, Marvin Gaye, The GAP Band, A Tribe Called Quest, Donell Jones. </div>
       </div>
 
     </div>

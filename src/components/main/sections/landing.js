@@ -2,7 +2,7 @@ import React from 'react';
 import { Slide, Fade } from '@material-ui/core';
 
 export const Landing = props => {
-  const allowFullScreen = 1;
+  // const allowFullScreen = 1;
 
   return (
     <div id="home" className="landing overlay-parent palette-three bottom-blue">
@@ -12,7 +12,7 @@ export const Landing = props => {
       </Fade>
       <Slide direction="left" timeout={1000} in={true} style={{transitionDelay: 1000}}>
       <div className="landing-video-layer overlay-element flex-column flex-center">
-        <div className="landing-video-layer-border palette-two-transparent">
+        {/* <div className="landing-video-layer-border palette-two-transparent">
           <iframe 
             src="https://drive.google.com/file/d/1sPl7fjCbKqBLuKdZZNoKE35qxzDTbk6w/preview" 
             frameBorder="0" 
@@ -23,7 +23,7 @@ export const Landing = props => {
             webkitallowfullscreen={allowFullScreen} 
             title="Video player">
           </iframe>
-        </div>
+        </div> */}
       </div>
       </Slide> 
     </div>
