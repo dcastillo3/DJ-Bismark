@@ -209,12 +209,12 @@ textarea {
 }
 
 .palette-four {
-    background-color: rgb(80, 99, 4);
+    background-color: rgb(133, 156, 38);
     color: rgb(247, 247, 247);
 }
 
 .bottom-blue {
-    border-bottom: 4px solid rgb(72, 155, 199);
+    border-bottom: 4px solid rgb(18, 115, 167);
 }
 
 .bottom-white {
@@ -246,8 +246,8 @@ textarea {
 
 .logo {
     width: 14vw;
-    height: 7vh;
-    background: url(./images/bismark-logo.png) no-repeat;
+    height: 20vh;
+    background: url(./images/bismarkLogo.png) no-repeat;
     background-size: contain;
     min-width: 260px;
     min-height: 56px;
@@ -412,6 +412,10 @@ textarea {
 
 .venue-item-playstation {
     background-size: 65%;
+}
+
+.venue-item-prada {
+    background-size: 62%;
 }
 
 .venue-item-webster {

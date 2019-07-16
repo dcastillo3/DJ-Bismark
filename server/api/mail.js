@@ -5,11 +5,11 @@ const { sendMail, utility } = require('../utilities');
 router.post('/request', (req, res, next) => {
     let emailInfo;
 
-    if(utility.validBookingRequest(req.body)) {
+    // if(utility.validBookingRequest(req.body)) {
         emailInfo = utility.parseBookingRequestEmail(req.body);
-    } else {
-        throw new Error('Invalid email format');
-    }
+    // } else {
+    //     throw new Error('Invalid email format');
+    // }
 
     sendMail(emailInfo, (err, data) => {
         if(err) console.log(err);

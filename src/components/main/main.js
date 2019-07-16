@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import {Landing, Music, Photos, Videos, Bio, Venues} from './sections';
+import {Landing, Music, Photos, Bio, Venues} from './sections';
 import ContactForm from '../contact-form';
 
 class Main extends Component {
@@ -9,10 +9,10 @@ class Main extends Component {
       <div className="main flex-column">
         <Landing />
         <Music />
-        <Photos />
-        <Videos />
         <Bio />
         <Venues />
+        <Photos />
+        {/* <Videos /> */}
         <ContactForm />
       </div>
     )
