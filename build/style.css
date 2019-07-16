@@ -119,22 +119,6 @@ textarea {
     right: 0;
 }
 
-.button {
-    border: none;
-    color: #fff;
-    background: #859c26;
-    text-transform: uppercase;
-    font-weight: 900;
-    border-radius: 5px;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: .2s cubic-bezier(0.28, -0.14, 0.12, 1.13);
-}
-
-.button:hover {
-    background: rgb(127, 210, 118);
-}
-
 
 /* #endregion ------ Global --------- */
 
@@ -225,12 +209,12 @@ textarea {
 }
 
 .palette-four {
-    background-color: rgb(133, 156, 38);
+    background-color: rgb(80, 99, 4);
     color: rgb(247, 247, 247);
 }
 
 .bottom-blue {
-    border-bottom: 4px solid rgb(18, 115, 167);
+    border-bottom: 4px solid rgb(72, 155, 199);
 }
 
 .bottom-white {
@@ -262,8 +246,8 @@ textarea {
 
 .logo {
     width: 14vw;
-    height: 20vh;
-    background: url(./images/bismarkLogo.png) no-repeat;
+    height: 7vh;
+    background: url(./images/bismark-logo.png) no-repeat;
     background-size: contain;
     min-width: 260px;
     min-height: 56px;
@@ -430,10 +414,6 @@ textarea {
     background-size: 65%;
 }
 
-.venue-item-prada {
-    background-size: 62%;
-}
-
 .venue-item-webster {
     background-size: 67%;
 }
@@ -480,11 +460,6 @@ textarea {
 
 .contact-form-textarea {
     flex: 100%;
-}
-
-.submit-captcha {
-    flex: auto;
-    justify-content: center;
 }
 
 

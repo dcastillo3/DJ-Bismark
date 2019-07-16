@@ -87,6 +87,7 @@ export class ContactForm extends Component {
             })
             }
             
+            <div className="submit-captcha flex flex-row">
             <div className="recaptcha">
             <ReCAPTCHA
               sitekey='6LcR-aYUAAAAAHqw1sDswzEYBTSdWKveHwVRs1_l'
@@ -95,6 +96,8 @@ export class ContactForm extends Component {
             </div>
 
             <button className="button" type="submit" disabled={this.state.captcha} value="submit">Submit</button>
+            </div>
+            
           </form>
         </div>
 
