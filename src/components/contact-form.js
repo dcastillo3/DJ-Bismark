@@ -14,10 +14,10 @@ export class ContactForm extends Component {
         Organization: { value: '', formType: 'text', required: 1 },
         Venue: { value: '', formType: 'text', required: 1 },
         Location: { value: '', formType: 'text', required: 1 },
-        Date: { value: '', formType: 'date', required: 1 },
+        Date: { value: '', formType: 'datetime-local', required: 1 },
         Comments: { value: '', formType: 'text', required: 0 }
       },
-      captcha: true
+      captcha: false
     }
   }
 
@@ -39,25 +39,29 @@ export class ContactForm extends Component {
 
   contactFormSubmit = (e) => {
     e.preventDefault();
+    const { captcha } = this.state;
 
-    axios.post('/api/bookings/request', this.state.formData)
-      .then(res => {
-        axios.post('/api/mail/request', this.state.formData)
-          .then(res => console.log(res))
-      })
-      .catch(err => console.log(err))
+    if (captcha) {
+      axios.post('/api/bookings/request', this.state.formData)
+        .then(res => {
+          axios.post('/api/mail/request', this.state.formData)
+            .then(res => console.log(res))
+        })
+        .catch(err => console.log(err))
+    }
   }
 
   toggleCaptcha = () => {
-    this.setState( prevState => ({
+    this.setState(prevState => ({
       ...prevState,
-      captcha: false
+      captcha: true
     }))
   }
 
   render() {
     const contactForm = this.state.formData;
     const fields = Object.keys(this.state.formData);
+    const { captcha } = this.state;
 
     return (
       <div id="contact" className="contact-form-section flex-column flex-center palette-three">
@@ -86,18 +90,18 @@ export class ContactForm extends Component {
               }
             })
             }
-            
+
             <div className="submit-captcha flex flex-row">
-            <div className="recaptcha">
-            <ReCAPTCHA
-              sitekey='6LcR-aYUAAAAAHqw1sDswzEYBTSdWKveHwVRs1_l'
-              onChange={this.toggleCaptcha}
-            />
+              <div className="recaptcha">
+                <ReCAPTCHA
+                  sitekey='6LcR-aYUAAAAAHqw1sDswzEYBTSdWKveHwVRs1_l'
+                  onChange={this.toggleCaptcha}
+                />
+              </div>
+
+              {captcha && <button className="button" type="submit" disabled={this.state.captcha} value="submit">Submit</button>}
             </div>
 
-            <button className="button" type="submit" disabled={this.state.captcha} value="submit">Submit</button>
-            </div>
-            
           </form>
         </div>
 
