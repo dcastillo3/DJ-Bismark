@@ -17,7 +17,8 @@ export class ContactForm extends Component {
         Date: { value: '', formType: 'datetime-local', required: 1 },
         Comments: { value: '', formType: 'text', required: 0 }
       },
-      captcha: false
+      captcha: false,
+      submitted: false
     }
   }
 
@@ -45,7 +46,14 @@ export class ContactForm extends Component {
       axios.post('/api/bookings/request', this.state.formData)
         .then(res => {
           axios.post('/api/mail/request', this.state.formData)
-            .then(res => console.log(res))
+            .then(res => {
+
+              console.log(res)
+              this.setState(prevState => ({
+                ...prevState,
+                submitted: true
+              }))
+            })
         })
         .catch(err => console.log(err))
     }
@@ -61,7 +69,7 @@ export class ContactForm extends Component {
   render() {
     const contactForm = this.state.formData;
     const fields = Object.keys(this.state.formData);
-    const { captcha } = this.state;
+    const { captcha, submitted } = this.state;
 
     return (
       <div id="contact" className="contact-form-section flex-column flex-center palette-three">
@@ -91,16 +99,20 @@ export class ContactForm extends Component {
             })
             }
 
-            <div className="submit-captcha flex flex-row">
-              <div className="recaptcha">
-                <ReCAPTCHA
-                  sitekey='6LcR-aYUAAAAAHqw1sDswzEYBTSdWKveHwVRs1_l'
-                  onChange={this.toggleCaptcha}
-                />
-              </div>
+            {submitted === false
+              ? <div className="submit-captcha flex flex-row">
+                <div className="recaptcha">
+                  <ReCAPTCHA
+                    sitekey='6LcR-aYUAAAAAHqw1sDswzEYBTSdWKveHwVRs1_l'
+                    onChange={this.toggleCaptcha}
+                  />
+                </div>
 
-              {captcha && <button className="button" type="submit" disabled={this.state.captcha} value="submit">Submit</button>}
-            </div>
+                {captcha && <button className="button" type="submit" disabled={!captcha} value="submit">Submit</button>}
+              </div>
+              : <div className="submit-captcha-thanks">
+                Your booking request was submitted!
+              </div>}
 
           </form>
         </div>
