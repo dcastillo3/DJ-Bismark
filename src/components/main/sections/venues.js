@@ -37,6 +37,7 @@ export class Venues extends Component {
           autoPlay={true}
           interval={10000}
           transitionTime={1500}
+          className="venues-carousel"
         >
           
           {partVenues.length && partVenues.map((venueArr, i) => {

@@ -7,7 +7,7 @@ export const Bio = props => {
       <div className="bio-content narrow-content large-padding">
         <div className="bio-title title small-margin">About Bismark</div>
         <div className="bio-description">
-          BisMark, born and raised in New York, brings edgy, groovy, and hip vibes to the turntable. BisMark can transition smoothly between records and keep the vibe going, or entertain the crowd with cuts and scratches like the godfathers of Djing did back in the 80's. BisMark is into the the real art of Disc Jockeying and doesn't just press play. Scratching and Cutting classic records together gives him life. BisMark's unique style bridges and bends genres into each other with melodic mixing that will wow your ears. BisMark and his wide range of tasty music and has experience in fashion events, Weddings, low key/laid back Lounges, Clubs and private events.
+          BisMark, born and raised New York, brings edgy, groovy, and hip vibes to the turntable. BisMark can transition smoothly and seamlessly between records to keep the vibe going, or entertain the crowd with cuts and scratches like the godfathers of Djing did back in the 80's. BisMark is into the real art of Disc Jockeying and doesn't just press play. Scratching and Cutting classic records adds to BisMark's unique style that bridges and bends genres into each other with melodic mixing that will wow your ears. BisMark has a wide range of tasteful music and experienced in fashion events, Weddings, low key/laid back Lounges, Clubs and private events.
         </div>
       </div>
     </div>
