@@ -122,7 +122,7 @@ textarea {
 .button {
     border: none;
     color: #fff;
-    background: #859c26;
+    background: rgb(77, 177, 0);
     text-transform: uppercase;
     font-weight: 900;
     border-radius: 5px;
