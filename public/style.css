@@ -390,6 +390,10 @@ textarea {
 
 
 /* #region --------- Venues --------- */
+.venues-carousel {
+    width: 100%;
+}
+
 .carousel .slide {
     background: transparent !important;
 }
