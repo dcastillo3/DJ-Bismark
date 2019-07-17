@@ -9,7 +9,7 @@
 /coverage
 
 # production
-/build
+# /build
 
 # misc
 .DS_Store
@@ -24,7 +24,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # deployment - uncomment directories below and comment out '/build' above.
-# src/*
-# public/*
-# build/static/css/*.map
-# build/static/js/*.map
+src/*
+public/*
+build/static/css/*.map
+build/static/js/*.map
