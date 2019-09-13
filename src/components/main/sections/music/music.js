@@ -6,17 +6,17 @@ export class Music extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentMix: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/461546394&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
+      currentMix: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/652764368&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true',
       mixes: [
+        {name: 'Timeless Magic',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/652764368&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'},
+        {name: '#48',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/664521062&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'},
         {name: 'Trip Hop',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/461546394&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'},
         {name: 'Soul Star',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/464663610&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'},
         {name: 'Amazing Grace',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/470826504&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'},
         {name: 'Sunshine And Samba',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/476278668&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'},
         {name: 'Funky Vivid Fantasy',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/485614842&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'},
         {name: '151st Street House Party',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/512678253&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'},
-        {name: 'AfroFunkyKompa',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/512683341&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'},
-        {name: 'Child Of The City',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/512685267&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'},
-        {name: 'Make America Krump Again',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/512690304&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'}
+        {name: 'AfroFunkyKompa',  url: 'https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/512683341&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'}
       ]
     }
   }
